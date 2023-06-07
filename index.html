@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-
+<!--
 <?php
 
 	session_start();
@@ -8,12 +8,14 @@
 	if ($_SESSION["username"] == "" && $_SESSION["username"]== null) {
 		echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../index.html'>";
 session_destroy();
-}?>
+}?> -->
 
 <head>
-    <title>Grammovil App</title>
+    <title>Petición Vacaciones</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="shortcut icon" href="lib/assets/img/iconoarriba.png" />
     <noscript>
@@ -146,9 +148,6 @@ session_destroy();
     </style>
 </head>
 
-
-
-
 <body class="is-preload">
 <div style='color:black !important;' id="modal_container" class="modal-container">
     <div class="modal">
@@ -186,240 +185,64 @@ session_destroy();
         <!-- Second Section -->
         <section id="second" class="main special">
             <header class="major">
-                <h2 id="nombre">--</h2>
-
-                <div id='avisoG' style='display:none;' class="danger">
-                    <p><strong>Gramito te escucha ha recibido tu mensaje!</strong> Hola Fernando espero que te encuentres muy bien para tu problema
-                        con la antigüedad se tendría que checar directamente con Roberto Arreola de Nóminas en las oficinas de RH esperamos con ansias tu visita, buen turno!.</p>
-                </div>
-
-                <!-- <div class="danger">
-                  <p><strong>Aviso!</strong> Gramito les recuerda que tienen que pasar el día jueves 30 al comedor todos los cumpleañeros
-                  de este mes, felicidades a todos! los esperamos.</p>
-                </div>-->
-
-                <div class="danger">
-                    <p><strong>Gramito te escucha</strong> Les agradece por compartir sus problemas y situaciones en las que se encuentran, su voz es muy importante y les ayudaremos a solucionar cada unos de sus problemas, muchas gracias :) .</p>
-                </div>
+                <h1 id="contador">05:00</h1>
+                <h2 id="nombre">Peticion de vacaciones</h2>
 
                 <ul class="alt">
-                    <li>Línea o área: <span id="linea">0</span> </li>
                     <li>
                         <div class="col-6 col-12-xsmall">
-                            <label>Ingresa tu número de tag para desbloquear tu caja ahorro,pendiente
-                                préstamo y fondo de ahorro</label>
-                            <input type="text" name="demo-name" id="numerotag" value=""
-                                   placeholder="Numero de tag" />
+                            <label>Seleccione su Shift Leader : </label>
+                            <select name="demo-name" id="">
+                                <option>Julia Jasso</option>
+                                <option>Erick Zamarron</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-6 col-12-xsmall">
+                            <label>Seleccione su turno : </label>
+                            <select name="demo-name" id="">
+                                <option>Primer Turno</option>
+                                <option>Segundo Turno</option>
+                                <option>Tercer Turno</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-6 col-12-xsmall">
+                            <label>Seleccione fecha de peticion : </label>
+                            <input type="date" name="" id="fechaPeticion" onchange="verificar()" min="2023-06-01" max="2023-06-30">
+                            <div id="peticiones">
+                                <ul id="lista">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-6 col-12-xsmall">
+                            <label>Seleccione su operacion : </label>
+                            <select name="demo-name" id="">
+                                <option>Primer Turno</option>
+                                <option>Segundo Turno</option>
+                                <option>Tercer Turno</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
                             <button style='margin-top:15px;' class="primary"
-                                    onclick="ordenTag();">Desbloquear</button>
+                                    onclick="compilacionDatos();">Desbloquear</button>
 
                             <button id="open" style='margin-top:15px; background-color: lightcoral;'
                                     class="primary">¿Cuál es mi tag?</button>
-                        </div>
                     </li>
                 </ul>
             </header>
 
-            <ul class="statistics">
-                <li class="style4">
-                    <img src="images/vacaciones (1).png">
-                    <strong id="vacaciones">0</strong> Vacaciones
-                </li>
-
-                <li class="style5">
-                    <img src="images/idea.png">
-                    <strong id="puntosKaizen">0</strong> Puntos Kaizen.
-                </li>
-
-                <li class="style1">
-                    <img src="images/calendario (1).png">
-                    <strong id="antiguedad">0</strong> Antigüedad
-                </li>
-            </ul>
-
-            <ul class="statistics">
-                <li class="style1">
-                    <img src="images/hucha (1).png">
-                    <strong id="caja">Bloqueado</strong> Caja Ahorro.
-                </li>
-                <li class="style2">
-                    <img src="images/prestamo (1).png">
-                    <strong id="prestamos">Bloqueado</strong> Pendiente Prestamo.
-                </li>
-                <li class="style3">
-                    <img src="images/ahorro.png">
-                    <strong id="fondoAhorro">Bloqueado</strong> Fondo Ahorro
-                </li>
-            </ul>
-        </section>
-
-        <!-- Get Started -->
-        <section id="cta" class="main special">
-            <header class="major">
-                <h2>Oprime el icono para descargar la pre nómina actual y tu bono de puntualidad.</h2>
-            </header>
-
-            <ul class="statistics">
-                <li class="style1">
-                    <a href='documentos/prenomina.pdf' download><img src="images/pdf.png"></a>
-                    <strong></strong> Descarga tu pre nómina<p id="fechaMensaje" style='margin-bottom:10px !important; color: white;font-size:15px;'></p>
-                </li>
-                <li class="style2">
-                    <a href='documentos/bonoAsistencia.pdf' download><img src="images/pdf.png"></a>
-                    <strong></strong><div id='mensajeVista'></div><p id="fechaMensajeBono" style='margin-bottom:10px !important; color: white;font-size:15px;'></p>
-                </li>
-            </ul>
-
 
         </section>
 
 
-        <!-- Second Section -->
-        <section id="second" class="main special">
-            <header class="major">
-                <h2>Solicitar Cartas.</h2>
-            </header>
-            <ul class="statistics">
-                <li class="style1">
-                    <img style="width: 64px;" src="images/chupete.png">
-                    <strong style='font-size: 1.6rem !important;' >Carta Guarderia</strong><button
-                        style='margin-top:15px;' class="primary" onclick="carta('guarderia');">Solicitar</button>
-                </li>
-                <li class="style2">
-                    <img style="width: 64px;" src="images/calidad.png">
-                    <strong style='font-size: 1.6rem !important;' >Carta de
-                        Recomendacion</strong><button style='margin-top:15px;' class="primary"
-                                                      onclick="carta('recomendacion');">Solicitar</button>
-                </li>
-                <li class="style3">
-                    <img style="width: 64px;" src="images/progreso.png">
-                    <strong style='font-size: 1.6rem !important;' >Constancia Laboral</strong><button
-                        style='margin-top:15px;' class="primary" onclick="carta('laboral');">Solicitar</button>
-                </li>
-                <li class="style4">
-                    <img style="width: 64px;" src="images/casa.png">
-                    <strong style='font-size: 1.6rem !important;' >Carta Infonavit</strong><button
-                        style='margin-top:15px;' class="primary" onclick="carta('infonavit');">Solicitar</button>
-                </li>
-            </ul>
-            <div id="cargaRegistro"></div>
-            <div id='registrado' style="display: none;">
-                <center><img style="width: 124px; margin-bottom: 20px;" src="images/voto-positivo.png"></center>
-                <h3 style='color:green;'>Se registro correctamente su peticion favor de pasar a Recursos Humanos con
-                    Jonathan Cañizo.</h3>
-            </div>
-        </section>
-
-
-        <section id="cta" class="main special">
-            <header class="major">
-                <h2>GPS</h2>
-                <p>Puedes revisar la tienda de GPS para canjear los puntos o igual puedes ingresar
-                    a Suggestion System para agregar ideas que tengas de manera digital.<br><span style='color: orange;'>La primer semana de cada
-                        mes se hará la actualización de puntos kaizen del mes anterior.</span></p>
-            </header>
-
-            <ul class="statistics">
-                <li class="style1">
-                    <a href='https://arketipo.mx/Ideas/IOS/Catalogo/'><img
-                            src="images/computadora-portatil (1).png"></a>
-                    <strong style='font-size: 1.6rem !important;' >Tienda</strong>
-                </li>
-                <li class="style5">
-                    <a href='https://arketipo.mx/Ideas/IOS/login.php'><img src="images/idea.png"></a>
-                    <strong style='font-size: 1.6rem !important;' id="puntos">Suggestion System</strong>
-                </li>
-            </ul>
-
-        </section>
-
-
-        <!-- Get Started -->
-        <section id="cta" class="main special">
-            <header class="major">
-                <h2>Grammer News</h2>
-
-                <h2>Orgullo Grammer</h2>
-                <img id="1" style='width: 70%;' alt="" />
-                <p id='nombreOrg'></p>
-
-                <h2>Líneas Ganadoras del mes.</h2>
-                <img id="2" style='width: 70%;' alt="" />
-                <hr>
-                <img id="3" style='width: 70%;' alt="" />
-                <hr>
-                <img id="4" style='width: 70%;' alt="" />
-                <hr>
-                <img id="5" style='width: 70%;' alt="" />
-                <hr>
-
-                <div class="container">
-                    <h1>Comunicados de Grammer</h1>
-
-                    <div class="image-container">
-                        <div class="image"><img id="6"></div>
-                        <div class="image"><img id="7"></div>
-                        <div class="image"><img id="8"></div>
-                        <div class="image"><img id="9"></div>
-                    </div>
-
-                    <div class="popup-image">
-                        <span>&times;</span>
-                        <img id="10" alt="">
-                    </div>
-                </div>
-
-                <iframe id='video' style="width:80%; margin-top:30px" height="315" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-
-            </header>
-        </section>
-
-        <!-- Get Started -->
-        <section id="cta" class="main special">
-            <header class="major">
-                <img height="180px" src="images/gramitoseguridadcabeza.png" alt="" />
-                <h2>Gramito te escucha</h2>
-                <p>Quieres reportar un problema laboral o hacer un comentario sobre algo que te moleste,
-                    solamente ingresa tus datos aquí y se les mandará un mensaje al equipo de recursos humanos.</p>
-
-                <ul class="alt">
-                    <li>
-                        <div class="col-6 col-12-xsmall">
-                            <p style='margin-bottom:10px !important;'>Quieres que tu opinión, queja o problema sea anónimo, solo oprime el botón de abajo.</p>
-                            <button style='margin-top:5px;' class="primary" onclick="anonima();">Hacer
-                                Anónima</button>
-                        </div>
-                    </li>
-                </ul>
-            </header>
-
-            <section id='tele'>
-                <form>
-                    <div class="row gtr-uniform">
-                        <div class="col-6 col-12-xsmall">
-                            <input type="text" name="demo-name" id="nombre2" value="" placeholder="Nombre" />
-                        </div>
-                        <div class="col-6 col-12-xsmall">
-                            <input type="text" name="demo-email" id="area" value="" placeholder="Area" />
-                        </div>
-                        <div class="col-12">
-                                <textarea name="demo-message" id="problema" placeholder="Ingresa el problema"
-                                          rows="6"></textarea>
-                        </div>
-
-                    </div>
-                </form>
-
-                <div class="col-12">
-                    <ul class="actions">
-                        <li><button class="primary" onclick="enviar();">Enviar</button></li>
-                    </ul>
-                </div>
-            </section>
-        </section>
     </div>
 
 
@@ -462,8 +285,89 @@ session_destroy();
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="script.js"></script>
+<script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
+        integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
+        data-cf-beacon='{"rayId":"7cd6c8fc89644871","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.4.0","si":100}'
+        crossorigin="anonymous"></script>
 
 <script>
+
+    var contador = 0;
+    function verificar() {
+
+        var inputFecha = document.getElementById("fechaPeticion");
+        var fechaSeleccionada = new Date(inputFecha.value);
+        var diasBloqueados = [10, 20, 21]; // Días bloqueados (por ejemplo)
+
+        var diaSeleccionado = fechaSeleccionada.getDate()+1;
+        if (diasBloqueados.includes(diaSeleccionado)) {
+            // Restablecer la fecha a un valor válido
+            inputFecha.value = "";
+            alert("El día " + diaSeleccionado + " está bloqueado. Por favor, selecciona otra fecha.");
+        }else {
+            var fecha = document.getElementById("fechaPeticion");
+            var lista = document.getElementById("lista");
+            var elemento = document.createElement("div");
+            elemento.classList.add("elemento");
+            elemento.innerHTML = "<p>"+fecha.value + "<button onclick=\"eliminarElemento(this.parentNode)\">Eliminar</button></p>";
+            lista.appendChild(elemento);
+        }
+    }
+
+    function eliminarElemento(elemento) {
+        elemento.remove();
+    }
+
+    function compilacionDatos() {
+        var divPadre = document.getElementById("lista");
+
+        // Obtener todos los elementos <p> dentro del div
+        var elementosP = divPadre.getElementsByTagName("p");
+
+        // Iterar sobre los elementos <p>
+        for (var i = 0; i < elementosP.length; i++) {
+            var elementoP = elementosP[i];
+            var valor = elementoP.textContent.trim().replaceAll("Eliminar","");
+            console.log(valor);
+        }
+    }
+
+    var contadorElemento = document.getElementById("contador");
+
+    // Establecer la fecha actual
+    var fechaActual = new Date().getTime();
+
+    // Establecer la fecha final en 5 minutos
+    var fechaFinal = new Date(fechaActual + (5 * 60 * 1000));
+
+    // Actualizar el contador cada segundo
+    var intervalo = setInterval(function() {
+        // Obtener la fecha y hora actual
+        var ahora = new Date().getTime();
+
+        // Calcular la diferencia en milisegundos entre la fecha final y la fecha actual
+        var diferencia = fechaFinal - ahora;
+
+        // Calcular los minutos y segundos restantes
+        var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        var segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        // Formatear los minutos y segundos para que tengan 2 dígitos
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+
+        // Actualizar el contenido del contador
+        contadorElemento.innerHTML = minutos + ":" + segundos;
+
+        // Si la cuenta regresiva ha terminado, detener el intervalo
+        if (diferencia < 0) {
+            clearInterval(intervalo);
+            contadorElemento.innerHTML = "00:00";
+
+            alert("Se acabo el tiempo")
+        }
+    }, 1000);
 
     const open = document.getElementById('open');
     const modal_container = document.getElementById('modal_container');

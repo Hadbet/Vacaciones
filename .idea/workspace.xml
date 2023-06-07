@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Extencion" />
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Cambie titulo de index.php">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686157120501</updated>
       <workItem from="1686157121511" duration="2133000" />
-      <workItem from="1686159307512" duration="1103000" />
+      <workItem from="1686159307512" duration="8570000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de index.html">
       <created>1686157300042</created>
@@ -115,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686160334980</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cambie titulo de index.php">
+      <created>1686160566323</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686160566323</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +159,8 @@
     <MESSAGE value="Ingreso de login.html" />
     <MESSAGE value="Librerias y utilidades" />
     <MESSAGE value="Extencion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extencion" />
+    <MESSAGE value="Cambie titulo de index.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambie titulo de index.php" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
