@@ -176,7 +176,7 @@ session_destroy();
     <!-- Header -->
     <header id="header" class="alt">
         <span class="logo"><img height="100px" src="images/Recurso 6 (2).png" alt="" /></span>
-        <h1>¡Grammovil App!</h1>
+        <h1>¡Petición de vacaciones!</h1>
         <p>Bienvenido a tu portal de consulta.</p>
     </header>
 
