@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Cambie titulo de index.php">
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Se agrego la logica inicial de las peticiones temporizador y lectura.">
+      <change afterPath="$PROJECT_DIR$/images/giphy.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,17 +58,20 @@
     "WebServerToolWindowFactoryState": "false",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "SSH Configuration",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "SSH Configuration",
-    "last_opened_file_path": "C:/Users/ex-ayari.altamirano/PhpstormProjects/PVacaciones",
+    "last_opened_file_path": "C:/Users/ex-ayari.altamirano/PhpstormProjects/PVacaciones/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "settings.codegpt",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ex-ayari.altamirano\PhpstormProjects\PVacaciones\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ex-ayari.altamirano\PhpstormProjects\PVacaciones" />
     </key>
@@ -81,7 +85,8 @@
       <option name="presentableId" value="Default" />
       <updated>1686157120501</updated>
       <workItem from="1686157121511" duration="2133000" />
-      <workItem from="1686159307512" duration="8570000" />
+      <workItem from="1686159307512" duration="15595000" />
+      <workItem from="1686179072057" duration="1562000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de index.html">
       <created>1686157300042</created>
@@ -125,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686160566323</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se agrego la logica inicial de las peticiones temporizador y lectura.">
+      <created>1686170811084</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686170811084</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +172,8 @@
     <MESSAGE value="Librerias y utilidades" />
     <MESSAGE value="Extencion" />
     <MESSAGE value="Cambie titulo de index.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambie titulo de index.php" />
+    <MESSAGE value="Se agrego la logica inicial de las peticiones temporizador y lectura." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrego la logica inicial de las peticiones temporizador y lectura." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
