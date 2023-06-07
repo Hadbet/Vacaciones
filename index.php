@@ -1,6 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 
+<?php
+
+	session_start();
+
+	if ($_SESSION["username"] == "" && $_SESSION["username"]== null) {
+		echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../index.html'>";
+session_destroy();
+}?>
+
 <head>
     <title>Grammovil App</title>
     <meta charset="utf-8" />
