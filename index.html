@@ -192,7 +192,7 @@ session_destroy();
                     <li>
                         <div class="col-6 col-12-xsmall">
                             <label>Seleccione su Shift Leader : </label>
-                            <select name="demo-name" id="">
+                            <select name="demo-name" id="sltShiftleader">
                                 <option>Julia Jasso</option>
                                 <option>Erick Zamarron</option>
                             </select>
@@ -201,7 +201,7 @@ session_destroy();
                     <li>
                         <div class="col-6 col-12-xsmall">
                             <label>Seleccione su turno : </label>
-                            <select name="demo-name" id="">
+                            <select name="demo-name" id="sltTurno">
                                 <option>Primer Turno</option>
                                 <option>Segundo Turno</option>
                                 <option>Tercer Turno</option>
@@ -213,20 +213,28 @@ session_destroy();
                             <label>Seleccione fecha de peticion : </label>
                             <input type="date" name="" id="fechaPeticion" onchange="verificar()" min="2023-06-01" max="2023-06-30">
                             <div id="peticiones">
-                                <ul id="lista">
-
-                                </ul>
+                                <div id="lista" class="table-wrapper">
+                                    <br>
+                                    <table id="tablaDatos">
+                                        <thead>
+                                        <tr>
+                                            <th>Fecha</th>
+                                            <th>Descripcion</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="contenido tabla">
+                                        </tbody>
+                                        <tfoot>
+                                        </tfoot>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="col-6 col-12-xsmall">
-                            <label>Seleccione su operacion : </label>
-                            <select name="demo-name" id="">
-                                <option>Primer Turno</option>
-                                <option>Segundo Turno</option>
-                                <option>Tercer Turno</option>
-                            </select>
+                            <label>Ingresa su operación : </label>
+                            <input type="text" name="" placeholder="Ingresa tu operacion" id="txtOperacion">
                         </div>
                     </li>
                     <li>
@@ -238,13 +246,8 @@ session_destroy();
                     </li>
                 </ul>
             </header>
-
-
         </section>
-
-
     </div>
-
 
     <!-- Footer -->
     <footer id="footer">
@@ -295,23 +298,40 @@ session_destroy();
 
     var contador = 0;
     function verificar() {
-
         var inputFecha = document.getElementById("fechaPeticion");
         var fechaSeleccionada = new Date(inputFecha.value);
         var diasBloqueados = [10, 20, 21]; // Días bloqueados (por ejemplo)
 
-        var diaSeleccionado = fechaSeleccionada.getDate()+1;
+        var diaSeleccionado = fechaSeleccionada.getDate() + 1;
         if (diasBloqueados.includes(diaSeleccionado)) {
-            // Restablecer la fecha a un valor válido
             inputFecha.value = "";
             alert("El día " + diaSeleccionado + " está bloqueado. Por favor, selecciona otra fecha.");
-        }else {
-            var fecha = document.getElementById("fechaPeticion");
-            var lista = document.getElementById("lista");
-            var elemento = document.createElement("div");
-            elemento.classList.add("elemento");
-            elemento.innerHTML = "<p>"+fecha.value + "<button onclick=\"eliminarElemento(this.parentNode)\">Eliminar</button></p>";
-            lista.appendChild(elemento);
+        } else {
+            var tabla = document.getElementById("tablaDatos");
+
+            var fila = document.createElement("tr");
+            var celdaFecha = document.createElement("td");
+            var parrafoFecha = document.createElement("div");
+
+            var dia = fechaSeleccionada.getDate().toString().padStart(2, "0");
+            var mes = (fechaSeleccionada.getMonth() + 1).toString().padStart(2, "0");
+            var anio = fechaSeleccionada.getFullYear().toString();
+
+            parrafoFecha.textContent = dia + "/" + mes + "/" + anio;
+
+            celdaFecha.appendChild(parrafoFecha);
+
+            var celdaEliminar = document.createElement("td");
+            var botonEliminar = document.createElement("button");
+            botonEliminar.textContent = "Eliminar";
+            botonEliminar.onclick = function() {
+                tabla.removeChild(fila);
+            };
+
+            celdaEliminar.appendChild(botonEliminar);
+            fila.appendChild(celdaFecha);
+            fila.appendChild(celdaEliminar);
+            tabla.appendChild(fila);
         }
     }
 
@@ -320,81 +340,72 @@ session_destroy();
     }
 
     function compilacionDatos() {
-        var divPadre = document.getElementById("lista");
+        var tabla = document.getElementById("tablaDatos");
+        var elementosP = tabla.querySelectorAll("td div");
+        var valores = [];
 
-        // Obtener todos los elementos <p> dentro del div
-        var elementosP = divPadre.getElementsByTagName("p");
-
-        // Iterar sobre los elementos <p>
         for (var i = 0; i < elementosP.length; i++) {
             var elementoP = elementosP[i];
-            var valor = elementoP.textContent.trim().replaceAll("Eliminar","");
-            console.log(valor);
+            var valor = elementoP.textContent.trim().replaceAll("Eliminar", "");
+            valores.push(valor);
+
         }
+        //insertarDatos(valores);
+        alert(valores);
+    }
+    function insertarDatos(datos) {
+        var otrosDatos = {
+            nombre: "Ejemplo",
+            edad: 30
+        };
+
+        var requestData = {
+            arrayDatos: datos,
+            otrosDatos: otrosDatos
+        };
+
+        fetch("insertar.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(requestData)
+        })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data); // Mostrar la respuesta del servidor
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
     }
 
     var contadorElemento = document.getElementById("contador");
-
-    // Establecer la fecha actual
     var fechaActual = new Date().getTime();
-
-    // Establecer la fecha final en 5 minutos
     var fechaFinal = new Date(fechaActual + (5 * 60 * 1000));
 
-    // Actualizar el contador cada segundo
     var intervalo = setInterval(function() {
-        // Obtener la fecha y hora actual
         var ahora = new Date().getTime();
-
-        // Calcular la diferencia en milisegundos entre la fecha final y la fecha actual
         var diferencia = fechaFinal - ahora;
 
-        // Calcular los minutos y segundos restantes
         var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
         var segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
-        // Formatear los minutos y segundos para que tengan 2 dígitos
         minutos = minutos < 10 ? "0" + minutos : minutos;
         segundos = segundos < 10 ? "0" + segundos : segundos;
-
-        // Actualizar el contenido del contador
         contadorElemento.innerHTML = minutos + ":" + segundos;
 
-        // Si la cuenta regresiva ha terminado, detener el intervalo
         if (diferencia < 0) {
             clearInterval(intervalo);
             contadorElemento.innerHTML = "00:00";
-
             alert("Se acabo el tiempo")
         }
     }, 1000);
 
-    const open = document.getElementById('open');
-    const modal_container = document.getElementById('modal_container');
-    const close = document.getElementById('close');
-
-    open.addEventListener('click', () => {
-        modal_container.classList.add('show');
-    });
-
-    close.addEventListener('click', () => {
-        modal_container.classList.remove('show');
-    });
-
-    document.querySelectorAll('.image-container img').forEach(image => {
-        image.onclick = () => {
-            document.querySelector('.popup-image').style.display = 'block';
-            document.querySelector('.popup-image img').src = image.getAttribute('src');
-        }
-    });
-
-    document.querySelector('.popup-image span').onclick = () => {
-        document.querySelector('.popup-image').style.display = 'none';
-    }
 </script>
 
 <script>
-    var id = "<?php echo $_SESSION["username"] ?>";
+    /*var id = "<?php echo $_SESSION["username"] ?>";
     var tag;
     var text;
 
@@ -635,7 +646,7 @@ session_destroy();
         document.getElementById('area').value = 'Anonima';
     }
 
-
+*/
 </script>
 
 </body>
