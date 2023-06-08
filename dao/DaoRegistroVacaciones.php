@@ -12,11 +12,10 @@ $ShiftLeader = $otrosDatos['shiftleader'];
 $TipoOperacion = $otrosDatos['tipoOperacion'];
 $Operacion = $otrosDatos['Operacion'];
 
-$Turno = obtenerValorConsulta() + 1;
-
-registroUsu($Token,$Turno);
-
-function registroUsu($Token,$Turno){
+foreach ($arrayDatos as $Valor) {
+    registroVacaciones($Token,$ShiftLeader,$TipoOperacion,$Operacion);
+}
+function registroVacaciones($Token,$ShiftLeader,$TipoOperacion,$Operacion){
 
     $con = new LocalConector();
     $conex=$con->conectar();
@@ -25,7 +24,7 @@ function registroUsu($Token,$Turno){
     $Object->setTimezone(new DateTimeZone('America/Denver'));
     $DateAndTime = $Object->format("Y/m/d h:i:s");
 
-    $insertRegistro= "INSERT INTO `FilaVirtual`(`Token`, `Turno`, `Fecha`) VALUES ('$Token','$Turno','$DateAndTime')";
+    $insertRegistro= "INSERT INTO `PeticionVacaciones`(`ShiftLeader`, `TipoOperacion`, `Operacion`, `Token`, `FechaRegistro`) VALUES ('$ShiftLeader','$TipoOperacion','$Operacion','$Token','$DateAndTime')";
 
     $rsinsertUsu=mysqli_query($conex,$insertRegistro);
     mysqli_close($conex);
@@ -37,28 +36,5 @@ function registroUsu($Token,$Turno){
         return 1;
     }
 }
-
-function obtenerValorConsulta() {
-    $con = new LocalConector();
-    $conex = $con->conectar();
-
-    $consulta = "SELECT columna FROM tabla WHERE condicion";
-
-    $resultado = mysqli_query($conex, $consulta);
-
-    if ($resultado) {
-        $fila = mysqli_fetch_assoc($resultado);
-        $valor = $fila['columna'];
-        mysqli_free_result($resultado);
-        mysqli_close($conex);
-        return $valor;
-    } else {
-        mysqli_close($conex);
-        return 0;
-    }
-}
-
-
-
 
 ?>
