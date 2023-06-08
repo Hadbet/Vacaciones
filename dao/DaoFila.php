@@ -42,7 +42,7 @@ function obtenerValorConsulta() {
     $con = new LocalConector();
     $conex = $con->conectar();
 
-    $consulta = "SELECT columna FROM tabla WHERE condicion";
+    $consulta = "SELECT `Turno` FROM `FilaVirtual` order by `IdFila` desc LIMIT 1;";
 
     $resultado = mysqli_query($conex, $consulta);
 

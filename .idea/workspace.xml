@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Realización inicial de la logica de la fila virtual">
-      <change afterPath="$PROJECT_DIR$/dao/DaoFila.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/DataBase/Vacaciones.php" afterDir="false" />
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Realizacion de dao principal de registro de peticion de vacaciones">
+      <change afterPath="$PROJECT_DIR$/fila.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/DaoFila.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/DaoFila.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/registro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,7 @@
       <updated>1686157120501</updated>
       <workItem from="1686157121511" duration="2133000" />
       <workItem from="1686159307512" duration="15595000" />
-      <workItem from="1686179072057" duration="11768000" />
+      <workItem from="1686179072057" duration="15672000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de index.html">
       <created>1686157300042</created>
@@ -145,7 +146,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686181383985</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Realizacion de dao principal de registro de peticion de vacaciones">
+      <created>1686260490366</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686260490366</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Realizacion de dao principal de registro de peticion de vacaciones">
+      <created>1686260680093</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686260680093</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +197,8 @@
     <MESSAGE value="Cambie titulo de index.php" />
     <MESSAGE value="Se agrego la logica inicial de las peticiones temporizador y lectura." />
     <MESSAGE value="Realización inicial de la logica de la fila virtual" />
-    <option name="LAST_COMMIT_MESSAGE" value="Realización inicial de la logica de la fila virtual" />
+    <MESSAGE value="Realizacion de dao principal de registro de peticion de vacaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Realizacion de dao principal de registro de peticion de vacaciones" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
