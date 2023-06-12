@@ -145,6 +145,7 @@ session_destroy();
             background-color: #e6dfff;
             border-left: 6px solid #4259a5;
         }
+
     </style>
 </head>
 
@@ -184,68 +185,82 @@ session_destroy();
 
         <!-- Second Section -->
         <section id="second" class="main special">
-            <header class="major">
-                <h1 id="contador">05:00</h1>
-                <h2 id="nombre">Peticion de vacaciones</h2>
+                <header class="major">
+                    <h1 id="contador">05:00</h1>
+                    <h2>Peticion de vacaciones</h2>
 
-                <ul class="alt">
-                    <li>
-                        <div class="col-6 col-12-xsmall">
-                            <label>Seleccione su Shift Leader : </label>
-                            <select name="demo-name" id="sltShiftleader">
-                                <option>Julia Jasso</option>
-                                <option>Erick Zamarron</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col-6 col-12-xsmall">
-                            <label>Seleccione su turno : </label>
-                            <select name="demo-name" id="sltTurno">
-                                <option>Primer Turno</option>
-                                <option>Segundo Turno</option>
-                                <option>Tercer Turno</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col-6 col-12-xsmall">
-                            <label>Seleccione fecha de peticion : </label>
-                            <input type="date" name="" id="fechaPeticion" onchange="verificar()" min="2023-06-01" max="2023-06-30">
-                            <div id="peticiones">
-                                <div id="lista" class="table-wrapper">
-                                    <br>
-                                    <table id="tablaDatos">
-                                        <thead>
-                                        <tr>
-                                            <th>Fecha</th>
-                                            <th>Descripcion</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody id="contenido tabla">
-                                        </tbody>
-                                        <tfoot>
-                                        </tfoot>
-                                    </table>
+                    <ul class="alt">
+                        <li>
+                            <div class="col-6 col-12-xsmall">
+                                <label style="font-size: 20px">Seleccione supervisor</label>
+                                <select name="" id="sltSupervisor">
+                                    <option value=""></option>
+                                    <option value="Uziel Landa">Uziel Landa</option>
+                                    <option value="Monica Aguilar">Monica Aguilar</option>
+                                    <option value="Alberto Ordonez">Alberto Ordoñez</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-6 col-12-xsmall">
+                                <label>Seleccione su Shift Leader : </label>
+                                <select name="demo-name" id="sltShiftleader">
+                                    <option value=""></option>
+                                    <option value="Uziel">Uziel Landa</option>
+                                    <option value="Julia Jasson">Julia Jasso</option>
+                                    <option value="Erick Zamarron">Erick Zamarron</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-6 col-12-xsmall">
+                                <label>Seleccione su turno : </label>
+                                <select name="demo-name" id="sltTurno">
+                                    <option value=""></option>
+                                    <option value="PrimerTurno">Primer Turno</option>
+                                    <option value="SegundoTurno">Segundo Turno</option>
+                                    <option value="TercerTurno">Tercer Turno</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-6 col-12-xsmall">
+                                <label>Seleccione fecha de peticion : </label>
+                                <input type="date" name="" id="fechaPeticion" onchange="verificar()" min="2023-06-01" max="2023-06-30">
+                                <div id="peticiones">
+                                    <div id="lista" class="table-wrapper">
+                                        <br>
+                                        <table id="tablaDatos">
+                                            <thead>
+                                            <tr>
+                                                <th>Fecha</th>
+                                                <th>Descripcion</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="contenido tabla">
+                                            </tbody>
+                                            <tfoot>
+                                            </tfoot>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col-6 col-12-xsmall">
-                            <label>Ingresa su operación : </label>
-                            <input type="text" name="" placeholder="Ingresa tu operacion" id="txtOperacion">
-                        </div>
-                    </li>
-                    <li>
-                            <button style='margin-top:15px;' class="primary"
+                        </li>
+                        <li>
+                            <div class="col-6 col-12-xsmall">
+                                <label>Ingresa su operación : </label>
+                                <input type="text" name="" placeholder="Ingresa tu operacion" id="txtOperacion">
+                            </div>
+                        </li>
+                        <li>
+                            <button id="btnSecond" style='margin-top:15px;' class="primary"
                                     onclick="compilacionDatos();">Desbloquear</button>
 
                             <button id="open" style='margin-top:15px; background-color: lightcoral;'
                                     class="primary">¿Cuál es mi tag?</button>
-                    </li>
-                </ul>
-            </header>
+                        </li>
+                    </ul>
+                </header>
         </section>
     </div>
 
@@ -296,13 +311,25 @@ session_destroy();
 
 <script>
 
+
+    var myInput = document.getElementById("fechaPeticion");
+    var today = new Date(); // Obtener la fecha actual
+    var minDate = today.toISOString().split("T")[0]; // Convertir la fecha actual a formato ISO (AAAA-MM-DD)
+    var maxDate = new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0]; // Calcular la fecha máxima sumando 30 días a la fecha actual
+
+    myInput.min = minDate;
+    myInput.max = maxDate;
+
+
     var contador = 0;
     function verificar() {
         var inputFecha = document.getElementById("fechaPeticion");
         var fechaSeleccionada = new Date(inputFecha.value);
         var diasBloqueados = [10, 20, 21]; // Días bloqueados (por ejemplo)
 
-        var diaSeleccionado = fechaSeleccionada.getDate() + 1;
+        var diaSeleccionado = fechaSeleccionada.getDate()+1;
+        var mesSeleccionado = today.getMonth() + 1;
+        alert(diaSeleccionado+"/"+mesSeleccionado);
         if (diasBloqueados.includes(diaSeleccionado)) {
             inputFecha.value = "";
             alert("El día " + diaSeleccionado + " está bloqueado. Por favor, selecciona otra fecha.");
@@ -313,7 +340,7 @@ session_destroy();
             var celdaFecha = document.createElement("td");
             var parrafoFecha = document.createElement("div");
 
-            var dia = fechaSeleccionada.getDate().toString().padStart(2, "0");
+            var dia = (fechaSeleccionada.getDate()+1).toString().padStart(2, "0");
             var mes = (fechaSeleccionada.getMonth() + 1).toString().padStart(2, "0");
             var anio = fechaSeleccionada.getFullYear().toString();
 
@@ -354,9 +381,17 @@ session_destroy();
         alert(valores);
     }
     function insertarDatos(datos) {
+
+        var supervisor = document.getElementById("sltSupervisor");
+        var shiftLeader = document.getElementById("sltShiftleader");
+        var Turno = document.getElementById("sltTurno");
+        var operacion = document.getElementById("txtOperacion");
+
         var otrosDatos = {
-            nombre: "Ejemplo",
-            edad: 30
+            SupervisorAux: supervisor,
+            ShiftLeaderAux: shiftLeader,
+            TurnoAux: Turno,
+            OperacionAux: operacion
         };
 
         var requestData = {
