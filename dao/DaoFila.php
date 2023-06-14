@@ -32,6 +32,7 @@ function registroUsu($Token,$Turno){
 
     if(!$rsinsertUsu){
         echo "0";
+        return 0;
     }else{
         echo "Si funciona";
         return 1;
