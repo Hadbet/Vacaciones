@@ -27,7 +27,7 @@ function obtenerValorConsultaAux() {
 
     if ($resultado) {
         $fila = mysqli_fetch_assoc($resultado);
-        $valor = $fila['columna'];
+        $valor = $fila['Turno'];
         mysqli_free_result($resultado);
         mysqli_close($conex);
         return $valor;
