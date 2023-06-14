@@ -1,6 +1,5 @@
 <?php
-include_once('db.php');
-
+include_once('DataBase/Vacaciones.php');
 Contador();
 /*
 $TurnoAux = obtenerValorConsulta();
