@@ -131,17 +131,14 @@ session_destroy();
     // Ejemplo de una cuenta regresiva de 5 minutos
     countdown(89-80);
 
-    $.getJSON('https://arketipo.mx/public_html/GrammerApp/inicio/DaoCajaAhorro.php?usuario=' + tag, function (data) {
+    var Turno = 1;
+    var Token = "";
 
-        document.getElementById('nombre').innerHTML = text;
-        document.getElementById('nombre2').value = text;
-        document.getElementById('caja').innerHTML = '0';
-        document.getElementById('prestamos').innerHTML = '0';
-
-        document.getElementById('caja').innerHTML = data.data[0].AhorroTotal;
-        document.getElementById('prestamos').innerHTML = data.data[0].PendientePrestamo;
-        document.getElementById('fondoAhorro').innerHTML = data.data[0].FondoAhorro;
-
+    $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/login.php', function (data) {
+        if (data.data[0].Turno == Turno){
+            window.location.href = 'registro.html?token='+Token;
+        }else {
+        }
     });
 </script>
 

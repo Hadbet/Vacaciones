@@ -6,7 +6,7 @@ function registroUsu($Token,$Turno,$DateAndTime){
     $con = new LocalConector();
     $conex=$con->conectar();
 
-    $insertRegistro= "INSERT INTO `FilaVirtual`(`Token`, `Turno`, `Fecha`) VALUES ('$Token','$Turno','$DateAndTime')";
+    $insertRegistro= "INSERT INTO `FilaVirtual`(`Token`, `Turno`, `Fecha`, `Estatus`) VALUES ('$Token','$Turno','$DateAndTime','1')";
 
     $rsinsertUsu=mysqli_query($conex,$insertRegistro);
     mysqli_close($conex);

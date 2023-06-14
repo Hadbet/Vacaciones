@@ -43,10 +43,10 @@ if (isset($_POST['btnFila'])) {
     if ($statusLogin == 1) {
         $_SESSION['token'] = $Token;
         $_SESSIOM['turno'] = $Turno;
-        echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../login.php'>";
+        echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../fila.html'>";
     } else if ($statusLogin == 0) {
         echo "<script>alert('Acceso Denegado')</script>";
-        echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=index.html'>";
+        echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../login.html'>";
     }
 }
 
