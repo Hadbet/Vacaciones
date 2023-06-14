@@ -31,7 +31,7 @@ function registroUsu($Token,$Turno){
     mysqli_close($conex);
 
     if(!$rsinsertUsu){
-        echo "0";
+        echo "$insertRegistro";
         return 0;
     }else{
         echo "Si funciona";
