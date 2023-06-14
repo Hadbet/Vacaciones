@@ -1,6 +1,6 @@
 <?php
 
-require 'DaoFila.php';
+require 'DaoAsignacionFila.php';
 
 if (isset($_POST['btnFila'])) {
 
@@ -35,6 +35,8 @@ if (isset($_POST['btnFila'])) {
 
     $Turno = obtenerValorConsulta() + 1;
     $Token = $Nomina."-".$Turno."-".$DateId;
+
+    echo $Token;
 
     $statusLogin = registroUsu($Token,$Turno,$DateAndTime);
 
