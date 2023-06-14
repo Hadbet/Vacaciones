@@ -137,7 +137,7 @@ session_destroy();
     $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoConsultaTurno.php', function (data) {
         if (data.data[0].Turno != "No"){
             if (data.data[0].Turno==Turno) {
-                window.location.href = 'registro.html?token=' + Token;
+                window.location.href = 'registro.html?token=' + data.data[0].Token;
             }
         }else {
         }
