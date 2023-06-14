@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Aviso de errores por json">
-      <change beforePath="$PROJECT_DIR$/fila.html" beforeDir="false" afterPath="$PROJECT_DIR$/fila.html" afterDir="false" />
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Se agrega token en fila.html">
+      <change afterPath="$PROJECT_DIR$/dao/DaoActualizarEstatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/registro.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
       <workItem from="1686157121511" duration="2133000" />
       <workItem from="1686159307512" duration="15595000" />
       <workItem from="1686179072057" duration="30106000" />
-      <workItem from="1686678928446" duration="12334000" />
+      <workItem from="1686678928446" duration="13476000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de index.html">
       <created>1686157300042</created>
@@ -297,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686775853458</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Se agrega token en fila.html">
+      <created>1686775930297</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1686775930297</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +357,8 @@
     <MESSAGE value="Correccion de todos los errores del registro" />
     <MESSAGE value="Se asigno la db" />
     <MESSAGE value="Aviso de errores por json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aviso de errores por json" />
+    <MESSAGE value="Se agrega token en fila.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrega token en fila.html" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

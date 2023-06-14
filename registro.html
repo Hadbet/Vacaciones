@@ -318,6 +318,17 @@
 
 <script>
 
+    var token = getParameterByName("token");
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        var cadena = results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        var arrTerminos = cadena.split(',');
+        return arrTerminos[0];
+    }
+
     var selectSupervisor = document.getElementById("sltSupervisor");
     var selectShiftleader = document.getElementById("sltShiftleader");
     var selectTurno = document.getElementById("sltTurno");
@@ -484,9 +495,20 @@
         if (diferencia < 0) {
             clearInterval(intervalo);
             contadorElemento.innerHTML = "00:00";
-            alert("Se acabo el tiempo")
+            alert("Se acabo el tiempo");
+            actualizarEstatus();
         }
-    }, 1000);
+    }, 1000)
+
+    function actualizarEstatus() {
+        $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoActualizarEstatus.php?6486f0e4='+token, function (data) {
+            if (data.data[0].Estatus != "0"){
+                alert("Algo salio mal");
+            }else {
+                alert("Correcto");
+            }
+        });
+    }
 
 </script>
 
