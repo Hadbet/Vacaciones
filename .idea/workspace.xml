@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Actualizacion de registro.html fetch,variables y acomodo">
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Actualizacion de registro de fila falta la consulta de la fila">
       <change afterPath="$PROJECT_DIR$/dao/ConsultaFila.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dao/Controladores.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dao/DaoAsignacionFila.php" afterDir="false" />
@@ -91,7 +91,7 @@
       <workItem from="1686157121511" duration="2133000" />
       <workItem from="1686159307512" duration="15595000" />
       <workItem from="1686179072057" duration="30106000" />
-      <workItem from="1686678928446" duration="5871000" />
+      <workItem from="1686678928446" duration="6504000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de index.html">
       <created>1686157300042</created>
@@ -177,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686595472785</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Actualizacion de registro de fila falta la consulta de la fila">
+      <created>1686764796818</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686764796818</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +224,8 @@
     <MESSAGE value="Realizacion de dao principal de registro de peticion de vacaciones" />
     <MESSAGE value="Agrego fila.html para un mejor control" />
     <MESSAGE value="Actualizacion de registro.html fetch,variables y acomodo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion de registro.html fetch,variables y acomodo" />
+    <MESSAGE value="Actualizacion de registro de fila falta la consulta de la fila" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion de registro de fila falta la consulta de la fila" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

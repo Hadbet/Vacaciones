@@ -5,7 +5,6 @@ require 'DaoFila.php';
 if (isset($_POST['btnFila'])) {
 
     $Nomina = $_POST['usuario'];
-    $contra = $_POST['password'];
 
     if (strlen($Nomina) == 1) {
         $Nomina = "0000000" . $Nomina;
