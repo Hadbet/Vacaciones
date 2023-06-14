@@ -19,8 +19,6 @@ function registroUsu($Token,$Turno,$DateAndTime){
         return 1;
     }
 }
-
-obtenerValorConsultaAux();
 function obtenerValorConsultaAux() {
     $con = new LocalConector();
     $conex = $con->conectar();
