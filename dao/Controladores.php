@@ -33,11 +33,12 @@ if (isset($_POST['btnFila'])) {
     $DateAndTime = $Object->format("Y/m/d h:i:s");
     $DateId = $Object->format("Ymdhis");
 
-    $Turno = obtenerValorConsulta() + 1;
-    $Token = $Nomina."-".$Turno."-".$DateId;
+    //$Turno = obtenerValorConsulta() + 1;
+    //$Token = $Nomina."-".$Turno."-".$DateId;
+    $Token = $Nomina."-".$DateId;
 
     echo $Token;
-
+/*
     $statusLogin = registroUsu($Token,$Turno,$DateAndTime);
 
     if ($statusLogin == 1) {
@@ -47,7 +48,7 @@ if (isset($_POST['btnFila'])) {
     } else if ($statusLogin == 0) {
         echo "<script>alert('Acceso Denegado')</script>";
         echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=index.html'>";
-    }
+    }*/
 }
 
 ?>
