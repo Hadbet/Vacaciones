@@ -3,9 +3,9 @@
 
 include_once('DataBase/Vacaciones.php');
 
-Contador();
+ContadorFila();
 
-function Contador($TipoEncargado)
+function ContadorFila()
 {
     $con = new LocalConector();
     $conex = $con->conectar();
