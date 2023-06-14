@@ -134,9 +134,11 @@ session_destroy();
     var Turno = 1;
     var Token = "";
 
-    $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/login.php', function (data) {
-        if (data.data[0].Turno == Turno){
-            window.location.href = 'registro.html?token='+Token;
+    $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoConsultaTurno.php', function (data) {
+        if (data.data[0].Turno != "No"){
+            if (data.data[0].Turno==Turno) {
+                window.location.href = 'registro.html?token=' + Token;
+            }
         }else {
         }
     });

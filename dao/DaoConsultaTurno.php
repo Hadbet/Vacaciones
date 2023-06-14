@@ -1,13 +1,13 @@
 <?php
 include_once('DataBase/Vacaciones.php');
-Contador();
+
 
 $TurnoAux = obtenerValorConsulta();
 
 if ($TurnoAux!="0"){
     Contador();
 }else{
-    echo '{"data":[{"IdFila":"1","Token":"","Turno":"1","Fecha":"2023-06-14 11:48:06","Estatus":"1"}]}';
+    echo '{"data":[{"IdFila":"No","Token":"No","Turno":"No","Fecha":"2023-06-14 11:48:06","Estatus":"1"}]}';
 }
 
 function obtenerValorConsulta() {
