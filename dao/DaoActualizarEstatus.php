@@ -1,7 +1,7 @@
 <?php
 include_once('DataBase/Vacaciones.php');
 
-$Token = $_GET("6486f0e4");
+$Token = $_GET['6486f0e4'];
 
 actualizarEstatus($Token);
 function actualizarEstatus($Token){
