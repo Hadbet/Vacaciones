@@ -28,13 +28,13 @@ function obtenerValorConsultaAux() {
     $resultado = mysqli_query($conex, $consulta);
 
     if ($resultado) {
-        $fila = mysqli_fetch_assoc($resultado);
-        $valor = $fila['Turno'];
+        //$fila = mysqli_fetch_assoc($resultado);
+        //$valor = $fila['Turno'];
         mysqli_free_result($resultado);
         mysqli_close($conex);
-        return $valor;
+        //return $valor;
     } else {
-        mysqli_close($conex);
+        //mysqli_close($conex);
         return 0;
     }
 }
