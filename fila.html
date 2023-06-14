@@ -128,9 +128,6 @@ session_destroy();
         }, 1000);
     }
 
-    // Ejemplo de una cuenta regresiva de 5 minutos
-    countdown(89-80);
-
     var Turno = 1;
     var Token = "";
 
@@ -142,6 +139,11 @@ session_destroy();
         }else {
         }
     });
+
+    $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoContadorFila.php', function (data) {
+        countdown(data.data[0].Conteo*5);
+    });
+
 </script>
 
 </body>
