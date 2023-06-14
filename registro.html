@@ -2,12 +2,10 @@
 <html>
 <!--
 <?php
-
 	session_start();
-
 	if ($_SESSION["username"] == "" && $_SESSION["username"]== null) {
 		echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../registro.html'>";
-session_destroy();
+    session_destroy();
 }?> -->
 
 <head>
@@ -146,6 +144,16 @@ session_destroy();
             border-left: 6px solid #4259a5;
         }
 
+        .etiqueta{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
     </style>
 </head>
 
@@ -182,17 +190,13 @@ session_destroy();
 
     <!-- Main -->
     <div id="main">
-
         <!-- Second Section -->
         <section id="second" class="main special">
                 <header class="major">
                     <h1 id="contador">05:00</h1>
-                    <h2>Peticion de vacaciones</h2>
-
-                    <ul class="alt">
-                        <li>
+                    <h2>Petición de vacaciones</h2>
                             <div class="col-6 col-12-xsmall">
-                                <label style="font-size: 20px">Seleccione supervisor</label>
+                                <label class="etiqueta">Seleccione supervisor :</label>
                                 <select name="" id="sltSupervisor">
                                     <option value=""></option>
                                     <option value="Uziel Landa">Uziel Landa</option>
@@ -200,10 +204,10 @@ session_destroy();
                                     <option value="Alberto Ordonez">Alberto Ordoñez</option>
                                 </select>
                             </div>
-                        </li>
-                        <li>
+
+                    <div id="ShiftLeader" style="display: none">
                             <div class="col-6 col-12-xsmall">
-                                <label>Seleccione su Shift Leader : </label>
+                                <label class="etiqueta">Seleccione su Shift Leader : </label>
                                 <select name="demo-name" id="sltShiftleader">
                                     <option value=""></option>
                                     <option value="Uziel">Uziel Landa</option>
@@ -211,10 +215,11 @@ session_destroy();
                                     <option value="Erick Zamarron">Erick Zamarron</option>
                                 </select>
                             </div>
-                        </li>
-                        <li>
+                    </div>
+
+                    <div id="Turno" style="display: none">
                             <div class="col-6 col-12-xsmall">
-                                <label>Seleccione su turno : </label>
+                                <label class="etiqueta">Seleccione su turno : </label>
                                 <select name="demo-name" id="sltTurno">
                                     <option value=""></option>
                                     <option value="PrimerTurno">Primer Turno</option>
@@ -222,10 +227,19 @@ session_destroy();
                                     <option value="TercerTurno">Tercer Turno</option>
                                 </select>
                             </div>
-                        </li>
-                        <li>
+                    </div>
+
+                    <div id="OperacionSeccion" style="display: none">
+
+                        <div class="col-6 col-12-xsmall">
+                            <label class="etiqueta">Ingresa su operación : </label>
+                            <input type="text" name="" placeholder="Ingresa tu operacion" id="txtOperacion">
+                        </div>
+                    </div>
+
+                    <div id="FechasSeccion" style="display: none">
                             <div class="col-6 col-12-xsmall">
-                                <label>Seleccione fecha de peticion : </label>
+                                <label class="etiqueta">Seleccione fecha de peticion : </label>
                                 <input type="date" name="" id="fechaPeticion" onchange="verificar()" min="2023-06-01" max="2023-06-30">
                                 <div id="peticiones">
                                     <div id="lista" class="table-wrapper">
@@ -245,21 +259,14 @@ session_destroy();
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="col-6 col-12-xsmall">
-                                <label>Ingresa su operación : </label>
-                                <input type="text" name="" placeholder="Ingresa tu operacion" id="txtOperacion">
-                            </div>
-                        </li>
-                        <li>
+
+                            <br>
                             <button id="btnSecond" style='margin-top:15px;' class="primary"
-                                    onclick="compilacionDatos();">Desbloquear</button>
+                                    onclick="compilacionDatos();">Enviar</button>
 
                             <button id="open" style='margin-top:15px; background-color: lightcoral;'
-                                    class="primary">¿Cuál es mi tag?</button>
-                        </li>
-                    </ul>
+                                    class="primary">Cancelar</button>
+                    </div>
                 </header>
         </section>
     </div>
@@ -311,6 +318,51 @@ session_destroy();
 
 <script>
 
+    var selectSupervisor = document.getElementById("sltSupervisor");
+    var selectShiftleader = document.getElementById("sltShiftleader");
+    var selectTurno = document.getElementById("sltTurno");
+    var txtOperacion = document.getElementById("txtOperacion");
+
+    var shiftleaderSeccion = document.getElementById("ShiftLeader");
+    var turnoSeccion = document.getElementById("Turno");
+    var operacionSeccion = document.getElementById("OperacionSeccion");
+    var fechaSeccion = document.getElementById("FechasSeccion");
+
+    selectSupervisor.addEventListener("change", function() {
+        if (selectSupervisor.value !== "") {
+            shiftleaderSeccion.style.display = "block";
+            shiftleaderSeccion.style.animation = "fade-in 0.9s";
+        } else {
+            shiftleaderSeccion.style.display = "none";
+        }
+    });
+
+    selectShiftleader.addEventListener("change", function() {
+        if (selectShiftleader.value !== "") {
+            turnoSeccion.style.display = "block";
+            turnoSeccion.style.animation = "fade-in 0.9s";
+        } else {
+            turnoSeccion.style.display = "none";
+        }
+    });
+
+    selectTurno.addEventListener("change", function() {
+        if (selectTurno.value !== "") {
+            operacionSeccion.style.display = "block";
+            operacionSeccion.style.animation = "fade-in 0.9s";
+        } else {
+            operacionSeccion.style.display = "none";
+        }
+    });
+
+    txtOperacion.addEventListener("input", function() {
+        if (txtOperacion.value !== "") {
+            fechaSeccion.style.display = "block";
+            fechaSeccion.style.animation = "fade-in 0.9s";
+        } else {
+            fechaSeccion.style.display = "none";
+        }
+    });
 
     var myInput = document.getElementById("fechaPeticion");
     var today = new Date(); // Obtener la fecha actual
@@ -329,7 +381,6 @@ session_destroy();
 
         var diaSeleccionado = fechaSeleccionada.getDate()+1;
         var mesSeleccionado = today.getMonth() + 1;
-        alert(diaSeleccionado+"/"+mesSeleccionado);
         if (diasBloqueados.includes(diaSeleccionado)) {
             inputFecha.value = "";
             alert("El día " + diaSeleccionado + " está bloqueado. Por favor, selecciona otra fecha.");

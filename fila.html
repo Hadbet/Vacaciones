@@ -45,6 +45,7 @@ session_destroy();
                 <h1 id="contador">05:00</h1>
                 <h2 id="nombre">Estas actualmente en el <span>85</span></h2>
             </header>
+            <h3>Antes de entrar al sistema prepara el tu turno,operacion y tus fechas a pedir recuerda que una vez adentro del sistema tienes un tiempo maximo de 5 minutos.</h3>
             <ul class="statistics">
                 <li class="style1">
                     <img style="width: 160px" src="images/giphy.gif">
@@ -129,6 +130,19 @@ session_destroy();
 
     // Ejemplo de una cuenta regresiva de 5 minutos
     countdown(89-80);
+
+    $.getJSON('https://arketipo.mx/public_html/GrammerApp/inicio/DaoCajaAhorro.php?usuario=' + tag, function (data) {
+
+        document.getElementById('nombre').innerHTML = text;
+        document.getElementById('nombre2').value = text;
+        document.getElementById('caja').innerHTML = '0';
+        document.getElementById('prestamos').innerHTML = '0';
+
+        document.getElementById('caja').innerHTML = data.data[0].AhorroTotal;
+        document.getElementById('prestamos').innerHTML = data.data[0].PendientePrestamo;
+        document.getElementById('fondoAhorro').innerHTML = data.data[0].FondoAhorro;
+
+    });
 </script>
 
 </body>
