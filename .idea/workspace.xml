@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Se agregaron post">
       <change beforePath="$PROJECT_DIR$/dao/Controladores.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/Controladores.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/DaoAsignacionFila.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/DaoAsignacionFila.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +86,7 @@
       <workItem from="1686157121511" duration="2133000" />
       <workItem from="1686159307512" duration="15595000" />
       <workItem from="1686179072057" duration="30106000" />
-      <workItem from="1686678928446" duration="7351000" />
+      <workItem from="1686678928446" duration="7443000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de index.html">
       <created>1686157300042</created>
@@ -213,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686765474622</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Se agregaron post">
+      <created>1686765666533</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1686765666533</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

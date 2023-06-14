@@ -33,9 +33,8 @@ if (isset($_POST['btnFila'])) {
     $DateAndTime = $Object->format("Y/m/d h:i:s");
     $DateId = $Object->format("Ymdhis");
 
-    //$Turno = obtenerValorConsulta() + 1;
-    //$Token = $Nomina."-".$Turno."-".$DateId;
-    $Token = $Nomina."-".$DateId;
+    $Turno = obtenerValorConsultaAux() + 1;
+    $Token = $Nomina."-".$Turno."-".$DateId;
 
     echo $Token;
 /*
