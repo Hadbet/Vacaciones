@@ -10,14 +10,14 @@
 
 <head>
     <title>Petición Vacaciones</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="shortcut icon" href="lib/assets/img/iconoarriba.png" />
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="shortcut icon" href="lib/assets/img/iconoarriba.png"/>
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
     <style>
         .container {
@@ -85,7 +85,7 @@
             object-fit: cover;
         }
 
-        @media (max-width:768px) {
+        @media (max-width: 768px) {
             .container .popup-image img {
                 width: 95%;
             }
@@ -144,14 +144,18 @@
             border-left: 6px solid #4259a5;
         }
 
-        .etiqueta{
+        .etiqueta {
             font-size: 20px;
             margin-top: 10px;
         }
 
         @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
     </style>
@@ -163,7 +167,7 @@
         <h1 style='color:dimgray !important; font-size: 27px;'>Lo marcado en rojo es el número de tag se encuentra
             en la parte trasera de tu credencial.</h1>
         <p>
-            <img style='width: 70%; margin-top:3%;' src="images/tag.png" alt="" />
+            <img style='width: 70%; margin-top:3%;' src="images/tag.png" alt=""/>
         </p>
         <button id="close">Cerrar</button>
     </div>
@@ -183,91 +187,92 @@
 
     <!-- Header -->
     <header id="header" class="alt">
-        <span class="logo"><img height="100px" src="images/Recurso 6 (2).png" alt="" /></span>
+        <span class="logo"><img height="100px" src="images/Recurso 6 (2).png" alt=""/></span>
         <h1>¡Petición de vacaciones!</h1>
         <p>Bienvenido a tu portal de consulta.</p>
     </header>
-
     <!-- Main -->
     <div id="main">
         <!-- Second Section -->
         <section id="second" class="main special">
-                <header class="major">
-                    <h1 id="contador">05:00</h1>
-                    <h2>Petición de vacaciones</h2>
-                            <div class="col-6 col-12-xsmall">
-                                <label class="etiqueta">Seleccione supervisor :</label>
-                                <select name="" id="sltSupervisor">
-                                    <option value=""></option>
-                                    <option value="Uziel Landa">Uziel Landa</option>
-                                    <option value="Monica Aguilar">Monica Aguilar</option>
-                                    <option value="Alberto Ordonez">Alberto Ordoñez</option>
-                                </select>
-                            </div>
+            <header class="major">
+                <h1 id="contador">05:00</h1>
+                <h2>Petición de vacaciones</h2>
+                <div class="col-6 col-12-xsmall">
+                    <label class="etiqueta">Seleccione supervisor :</label>
+                    <select name="" id="sltSupervisor">
+                        <option value=""></option>
+                        <option value="Uziel Landa">Uziel Landa</option>
+                        <option value="Monica Aguilar">Monica Aguilar</option>
+                        <option value="Alberto Ordonez">Alberto Ordoñez</option>
+                    </select>
+                </div>
 
-                    <div id="ShiftLeader" style="display: none">
-                            <div class="col-6 col-12-xsmall">
-                                <label class="etiqueta">Seleccione su Shift Leader : </label>
-                                <select name="demo-name" id="sltShiftleader">
-                                    <option value=""></option>
-                                    <option value="Uziel">Uziel Landa</option>
-                                    <option value="Julia Jasson">Julia Jasso</option>
-                                    <option value="Erick Zamarron">Erick Zamarron</option>
-                                </select>
-                            </div>
+                <div id="ShiftLeader" style="display: none">
+                    <div class="col-6 col-12-xsmall">
+                        <label class="etiqueta">Seleccione su Shift Leader : </label>
+                        <select name="demo-name" id="sltShiftleader">
+                            <option value=""></option>
+                            <option value="Uziel">Uziel Landa</option>
+                            <option value="Julia Jasson">Julia Jasso</option>
+                            <option value="Erick Zamarron">Erick Zamarron</option>
+                        </select>
                     </div>
+                </div>
 
-                    <div id="Turno" style="display: none">
-                            <div class="col-6 col-12-xsmall">
-                                <label class="etiqueta">Seleccione su turno : </label>
-                                <select name="demo-name" id="sltTurno">
-                                    <option value=""></option>
-                                    <option value="PrimerTurno">Primer Turno</option>
-                                    <option value="SegundoTurno">Segundo Turno</option>
-                                    <option value="TercerTurno">Tercer Turno</option>
-                                </select>
-                            </div>
+                <div id="Turno" style="display: none">
+                    <div class="col-6 col-12-xsmall">
+                        <label class="etiqueta">Seleccione su turno : </label>
+                        <select name="demo-name" id="sltTurno">
+                            <option value=""></option>
+                            <option value="PrimerTurno">Primer Turno</option>
+                            <option value="SegundoTurno">Segundo Turno</option>
+                            <option value="TercerTurno">Tercer Turno</option>
+                        </select>
                     </div>
+                </div>
 
-                    <div id="OperacionSeccion" style="display: none">
+                <div id="OperacionSeccion" style="display: none">
 
-                        <div class="col-6 col-12-xsmall">
-                            <label class="etiqueta">Ingresa su operación : </label>
-                            <input type="text" name="" placeholder="Ingresa tu operacion" id="txtOperacion">
+                    <div class="col-6 col-12-xsmall">
+                        <label class="etiqueta">Ingresa su operación : </label>
+                        <input type="text" name="" placeholder="Ingresa tu operacion" id="txtOperacion">
+                    </div>
+                </div>
+
+                <div id="FechasSeccion" style="display: none">
+                    <div class="col-6 col-12-xsmall">
+                        <label class="etiqueta">Seleccione fecha de peticion : </label>
+                        <input type="date" name="" id="fechaPeticion" onchange="verificar()" min="2023-06-01"
+                               max="2023-06-30">
+                        <div id="peticiones">
+                            <div id="lista" class="table-wrapper">
+                                <br>
+                                <table id="tablaDatos">
+                                    <thead>
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>Descripcion</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="contenido tabla">
+                                    </tbody>
+                                    <tfoot>
+                                    </tfoot>
+                                </table>
+                            </div>
                         </div>
                     </div>
 
-                    <div id="FechasSeccion" style="display: none">
-                            <div class="col-6 col-12-xsmall">
-                                <label class="etiqueta">Seleccione fecha de peticion : </label>
-                                <input type="date" name="" id="fechaPeticion" onchange="verificar()" min="2023-06-01" max="2023-06-30">
-                                <div id="peticiones">
-                                    <div id="lista" class="table-wrapper">
-                                        <br>
-                                        <table id="tablaDatos">
-                                            <thead>
-                                            <tr>
-                                                <th>Fecha</th>
-                                                <th>Descripcion</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody id="contenido tabla">
-                                            </tbody>
-                                            <tfoot>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <br>
-                            <button id="btnSecond" style='margin-top:15px;' class="primary"
-                                    onclick="compilacionDatos();">Enviar</button>
-
-                            <button id="open" style='margin-top:15px; background-color: lightcoral;'
-                                    class="primary">Cancelar</button>
-                    </div>
-                </header>
+                    <br>
+                    <button id="btnSecond" style='margin-top:15px;' class="primary"
+                            onclick="compilacionDatos();">Enviar
+                    </button>
+                    <button id="open" style='margin-top:15px; background-color: lightcoral;'
+                            class="primary">Cancelar
+                    </button>
+                </div>
+            </header>
         </section>
     </div>
 
@@ -280,9 +285,9 @@
                 <dd>Av. de la luz #24 int.&bull; 3 y 4 &bull; Acceso III</dd>
                 <dd>Parque Ind. Benito Juárez &bull;76120 &bull;
                 <dd>Querétaro, Qro. México</dd>
-                <dt>RH </dt>
+                <dt>RH</dt>
                 <dd> +52 (42) 36 44 60</dd>
-                <dt>Vigilancia </dt>
+                <dt>Vigilancia</dt>
                 <dd> +52 (42) 38 44 00</dd>
                 <dt>Servicio Medico</dt>
                 <dd> +52 (42) 38 44 64</dd>
@@ -310,8 +315,7 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="script.js"></script>
-<script defer
-        src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
         integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
         data-cf-beacon='{"rayId":"7cd6c8fc89644871","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.4.0","si":100}'
         crossorigin="anonymous"></script>
@@ -339,7 +343,7 @@
     var operacionSeccion = document.getElementById("OperacionSeccion");
     var fechaSeccion = document.getElementById("FechasSeccion");
 
-    selectSupervisor.addEventListener("change", function() {
+    selectSupervisor.addEventListener("change", function () {
         if (selectSupervisor.value !== "") {
             shiftleaderSeccion.style.display = "block";
             shiftleaderSeccion.style.animation = "fade-in 0.9s";
@@ -348,7 +352,7 @@
         }
     });
 
-    selectShiftleader.addEventListener("change", function() {
+    selectShiftleader.addEventListener("change", function () {
         if (selectShiftleader.value !== "") {
             turnoSeccion.style.display = "block";
             turnoSeccion.style.animation = "fade-in 0.9s";
@@ -357,7 +361,7 @@
         }
     });
 
-    selectTurno.addEventListener("change", function() {
+    selectTurno.addEventListener("change", function () {
         if (selectTurno.value !== "") {
             operacionSeccion.style.display = "block";
             operacionSeccion.style.animation = "fade-in 0.9s";
@@ -366,7 +370,7 @@
         }
     });
 
-    txtOperacion.addEventListener("input", function() {
+    txtOperacion.addEventListener("input", function () {
         if (txtOperacion.value !== "") {
             fechaSeccion.style.display = "block";
             fechaSeccion.style.animation = "fade-in 0.9s";
@@ -385,12 +389,13 @@
 
 
     var contador = 0;
+
     function verificar() {
         var inputFecha = document.getElementById("fechaPeticion");
         var fechaSeleccionada = new Date(inputFecha.value);
         var diasBloqueados = [10, 20, 21]; // Días bloqueados (por ejemplo)
 
-        var diaSeleccionado = fechaSeleccionada.getDate()+1;
+        var diaSeleccionado = fechaSeleccionada.getDate() + 1;
         var mesSeleccionado = today.getMonth() + 1;
         if (diasBloqueados.includes(diaSeleccionado)) {
             inputFecha.value = "";
@@ -402,7 +407,7 @@
             var celdaFecha = document.createElement("td");
             var parrafoFecha = document.createElement("div");
 
-            var dia = (fechaSeleccionada.getDate()+1).toString().padStart(2, "0");
+            var dia = (fechaSeleccionada.getDate() + 1).toString().padStart(2, "0");
             var mes = (fechaSeleccionada.getMonth() + 1).toString().padStart(2, "0");
             var anio = fechaSeleccionada.getFullYear().toString();
 
@@ -413,7 +418,7 @@
             var celdaEliminar = document.createElement("td");
             var botonEliminar = document.createElement("button");
             botonEliminar.textContent = "Eliminar";
-            botonEliminar.onclick = function() {
+            botonEliminar.onclick = function () {
                 tabla.removeChild(fila);
             };
 
@@ -442,6 +447,7 @@
         //insertarDatos(valores);
         alert(valores);
     }
+
     function insertarDatos(datos) {
 
         var supervisor = document.getElementById("sltSupervisor");
@@ -481,7 +487,7 @@
     var fechaActual = new Date().getTime();
     var fechaFinal = new Date(fechaActual + (5 * 60 * 1000));
 
-    var intervalo = setInterval(function() {
+    var intervalo = setInterval(function () {
         var ahora = new Date().getTime();
         var diferencia = fechaFinal - ahora;
 
@@ -501,10 +507,10 @@
     }, 1000)
 
     function actualizarEstatus() {
-        $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoActualizarEstatus.php?6486f0e4='+token, function (data) {
-            if (data.data[0].Estatus != "0"){
+        $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoActualizarEstatus.php?6486f0e4=' + token, function (data) {
+            if (data.data[0].Estatus != "0") {
                 alert("Algo salio mal");
-            }else {
+            } else {
                 alert("Correcto");
             }
         });

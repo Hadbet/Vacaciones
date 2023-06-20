@@ -1,25 +1,28 @@
 <?php
 
 include_once('DataBase/Vacaciones.php');
-function registroUsu($Token,$Turno,$DateAndTime){
+function registroUsu($Token, $Turno, $DateAndTime)
+{
 
     $con = new LocalConector();
-    $conex=$con->conectar();
+    $conex = $con->conectar();
 
-    $insertRegistro= "INSERT INTO `FilaVirtual`(`Token`, `Turno`, `Fecha`, `Estatus`) VALUES ('$Token','$Turno','$DateAndTime','1')";
+    $insertRegistro = "INSERT INTO `FilaVirtual`(`Token`, `Turno`, `Fecha`, `Estatus`) VALUES ('$Token','$Turno','$DateAndTime','1')";
 
-    $rsinsertUsu=mysqli_query($conex,$insertRegistro);
+    $rsinsertUsu = mysqli_query($conex, $insertRegistro);
     mysqli_close($conex);
 
-    if(!$rsinsertUsu){
+    if (!$rsinsertUsu) {
         echo "0";
         return 0;
-    }else{
+    } else {
         echo "Si funciona";
         return 1;
     }
 }
-function obtenerValorConsultaAux() {
+
+function obtenerValorConsultaAux()
+{
     $con = new LocalConector();
     $conex = $con->conectar();
 

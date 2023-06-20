@@ -34,11 +34,11 @@ if (isset($_POST['btnFila'])) {
     $DateId = $Object->format("Ymdhis");
 
     $Turno = obtenerValorConsultaAux() + 1;
-    $Token = $Nomina."-".$Turno."-".$DateId;
+    $Token = $Nomina . "-" . $Turno . "-" . $DateId;
 
     echo $Token;
 
-    $statusLogin = registroUsu($Token,$Turno,$DateAndTime);
+    $statusLogin = registroUsu($Token, $Turno, $DateAndTime);
 
     if ($statusLogin == 1) {
         $_SESSION['token'] = $Token;

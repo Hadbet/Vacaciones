@@ -12,14 +12,14 @@ session_destroy();
 
 <head>
     <title>Petición Vacaciones</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="shortcut icon" href="lib/assets/img/iconoarriba.png" />
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="shortcut icon" href="lib/assets/img/iconoarriba.png"/>
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
 </head>
 
@@ -31,7 +31,7 @@ session_destroy();
 
     <!-- Header -->
     <header id="header" class="alt">
-        <span class="logo"><img height="100px" src="images/Recurso 6 (2).png" alt="" /></span>
+        <span class="logo"><img height="100px" src="images/Recurso 6 (2).png" alt=""/></span>
         <h1>Fila virtual</h1>
         <p>Bienvenido a tu portal de consulta.</p>
     </header>
@@ -45,11 +45,12 @@ session_destroy();
                 <h1 id="contador">05:00</h1>
                 <h2 id="nombre">Estas actualmente en el <span>85</span></h2>
             </header>
-            <h3>Antes de entrar al sistema prepara el tu turno,operacion y tus fechas a pedir recuerda que una vez adentro del sistema tienes un tiempo maximo de 5 minutos.</h3>
+            <h3>Antes de entrar al sistema prepara el tu turno,operacion y tus fechas a pedir recuerda que una vez
+                adentro del sistema tienes un tiempo maximo de 5 minutos.</h3>
             <ul class="statistics">
                 <li class="style1">
                     <img style="width: 160px" src="images/giphy.gif">
-                    <strong id="caja" >Fila actual</strong> <span style="font-size: 30px">80</span>.
+                    <strong id="caja">Fila actual</strong> <span style="font-size: 30px">80</span>.
                 </li>
             </ul>
             <p>Puedes salir de la pagina solo recuerda tenerla en segundo plano y no cerrarla</p>
@@ -65,9 +66,9 @@ session_destroy();
                 <dd>Av. de la luz #24 int.&bull; 3 y 4 &bull; Acceso III</dd>
                 <dd>Parque Ind. Benito Juárez &bull;76120 &bull;
                 <dd>Querétaro, Qro. México</dd>
-                <dt>RH </dt>
+                <dt>RH</dt>
                 <dd> +52 (42) 36 44 60</dd>
-                <dt>Vigilancia </dt>
+                <dt>Vigilancia</dt>
                 <dd> +52 (42) 38 44 00</dd>
                 <dt>Servicio Medico</dt>
                 <dd> +52 (42) 38 44 64</dd>
@@ -132,16 +133,16 @@ session_destroy();
     var Token = "";
 
     $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoConsultaTurno.php', function (data) {
-        if (data.data[0].Turno != "No"){
-            if (data.data[0].Turno==Turno) {
+        if (data.data[0].Turno != "No") {
+            if (data.data[0].Turno == Turno) {
                 window.location.href = 'registro.html?token=' + data.data[0].Token;
             }
-        }else {
+        } else {
         }
     });
 
     $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoContadorFila.php', function (data) {
-        countdown(data.data[0].Conteo*5);
+        countdown(data.data[0].Conteo * 5);
     });
 
 </script>

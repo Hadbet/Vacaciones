@@ -4,13 +4,14 @@ include_once('DataBase/Vacaciones.php');
 
 $TurnoAux = obtenerValorConsulta();
 
-if ($TurnoAux!="0"){
+if ($TurnoAux != "0") {
     Contador();
-}else{
+} else {
     echo '{"data":[{"IdFila":"No","Token":"No","Turno":"No","Fecha":"2023-06-14 11:48:06","Estatus":"1"}]}';
 }
 
-function obtenerValorConsulta() {
+function obtenerValorConsulta()
+{
     $con = new LocalConector();
     $conex = $con->conectar();
 

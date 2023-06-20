@@ -14,32 +14,34 @@ $Operacion = $otrosDatos['Operacion'];
 
 $Turno = obtenerValorConsulta() + 1;
 
-registroUsu($Token,$Turno);
+registroUsu($Token, $Turno);
 
-function registroUsu($Token,$Turno){
+function registroUsu($Token, $Turno)
+{
 
     $con = new LocalConector();
-    $conex=$con->conectar();
+    $conex = $con->conectar();
 
     $Object = new DateTime();
     $Object->setTimezone(new DateTimeZone('America/Denver'));
     $DateAndTime = $Object->format("Y/m/d h:i:s");
 
-    $insertRegistro= "INSERT INTO `FilaVirtual`(`Token`, `Turno`, `Fecha`) VALUES ('$Token','$Turno','$DateAndTime')";
+    $insertRegistro = "INSERT INTO `FilaVirtual`(`Token`, `Turno`, `Fecha`) VALUES ('$Token','$Turno','$DateAndTime')";
 
-    $rsinsertUsu=mysqli_query($conex,$insertRegistro);
+    $rsinsertUsu = mysqli_query($conex, $insertRegistro);
     mysqli_close($conex);
 
-    if(!$rsinsertUsu){
+    if (!$rsinsertUsu) {
         echo "$insertRegistro";
         return 0;
-    }else{
+    } else {
         echo "Si funciona";
         return 1;
     }
 }
 
-function obtenerValorConsulta() {
+function obtenerValorConsulta()
+{
     $con = new LocalConector();
     $conex = $con->conectar();
 
@@ -58,8 +60,6 @@ function obtenerValorConsulta() {
         return 0;
     }
 }
-
-
 
 
 ?>
