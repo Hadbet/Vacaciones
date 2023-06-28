@@ -142,7 +142,7 @@ session_destroy();
     });
 
     $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoContadorFila.php', function (data) {
-        countdown(data.data[0].Conteo * 5);
+        countdown((data.data[0].Conteo)-1 * 5);
     });
 
 </script>

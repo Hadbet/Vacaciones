@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Agrego tareas crom y se reestructuro la base de datos lo cual afecto a Controladores.php">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/TareasCron/DaoActualizarEstatusCron.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/TareasCron/DaoActualizarEstatusCron.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fila.html" beforeDir="false" afterPath="$PROJECT_DIR$/fila.php" afterDir="false" />
-    </list>
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="coreccion de errores" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +87,7 @@
       <workItem from="1686179072057" duration="30106000" />
       <workItem from="1686678928446" duration="19713000" />
       <workItem from="1687212302835" duration="14344000" />
-      <workItem from="1687891335836" duration="16509000" />
+      <workItem from="1687891335836" duration="17461000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de index.html">
       <created>1686157300042</created>
@@ -352,7 +348,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687964675213</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Se cambio el tipo de archivo a php y se agrego la consulta del session turno y token.">
+      <created>1687974087833</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1687974087833</updated>
+    </task>
+    <task id="LOCAL-00039" summary="coreccion de errores">
+      <created>1687975147153</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1687975147153</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,8 +392,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Extencion" />
-    <MESSAGE value="Cambie titulo de index.php" />
     <MESSAGE value="Se agrego la logica inicial de las peticiones temporizador y lectura." />
     <MESSAGE value="Realización inicial de la logica de la fila virtual" />
     <MESSAGE value="Realizacion de dao principal de registro de peticion de vacaciones" />
@@ -407,7 +415,9 @@
     <MESSAGE value="Se corriguie error en ContadorFila" />
     <MESSAGE value="Acomodar Formatos" />
     <MESSAGE value="Agrego tareas crom y se reestructuro la base de datos lo cual afecto a Controladores.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego tareas crom y se reestructuro la base de datos lo cual afecto a Controladores.php" />
+    <MESSAGE value="Se cambio el tipo de archivo a php y se agrego la consulta del session turno y token." />
+    <MESSAGE value="coreccion de errores" />
+    <option name="LAST_COMMIT_MESSAGE" value="coreccion de errores" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
