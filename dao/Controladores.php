@@ -44,14 +44,18 @@ if (isset($_POST['btnFila'])) {
 
     $DateAux = $ObjectAux->format("Y/m/d h:i:s");
 
-    echo $Token;
+
 
     $statusLogin = registroUsu($Token, $Turno, $DateAndTime,$DateAux);
 
     if ($statusLogin == 1) {
         $_SESSION['token'] = $Token;
         $_SESSIOM['turno'] = $Turno;
-        echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../fila.html'>";
+
+        echo $_SESSION['token'];
+        echo $_SESSION['turno'];
+
+        echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../fila.php'>";
     } else if ($statusLogin == 0) {
         echo "<script>alert('Acceso Denegado')</script>";
         echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../login.html'>";
