@@ -4,6 +4,8 @@ require 'DaoAsignacionFila.php';
 
 if (isset($_POST['btnFila'])) {
 
+    session_start();
+
     $Nomina = $_POST['usuario'];
 
     if (strlen($Nomina) == 1) {
