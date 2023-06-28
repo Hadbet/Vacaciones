@@ -129,8 +129,8 @@ session_destroy();
         }, 1000);
     }
 
-    var Turno = '<?php echo $_SESSION["turno"];?>';
-    var Token = '<?php echo $_SESSION["token"];?>';
+    var Turno = '<?php echo $_SESSION["turno"]?>';
+    var Token = '<?php echo $_SESSION["token"]?>';
 
     alert(Turno);
     alert(Token);
