@@ -132,6 +132,9 @@ session_destroy();
     var Turno = '<?php echo $_SESSION["turno"];?>';
     var Token = '<?php echo $_SESSION["token"];?>';
 
+    alert(Turno);
+    alert(Token);
+
     $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoConsultaTurno.php', function (data) {
         if (data.data[0].Turno != "No") {
             if (data.data[0].Turno == Turno) {
