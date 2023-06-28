@@ -36,9 +36,17 @@ if (isset($_POST['btnFila'])) {
     $Turno = obtenerValorConsultaAux() + 1;
     $Token = $Nomina . "-" . $Turno . "-" . $DateId;
 
+    $ObjectAux = new DateTime();
+    $ObjectAux->setTimezone(new DateTimeZone('America/Denver'));
+
+    $intervalo = new DateInterval('PT' . ($Turno * 5) . 'M');
+    $ObjectAux->add($intervalo);
+
+    $DateAux = $ObjectAux->format("Y/m/d h:i:s");
+
     echo $Token;
 
-    $statusLogin = registroUsu($Token, $Turno, $DateAndTime);
+    $statusLogin = registroUsu($Token, $Turno, $DateAndTime,$DateAux);
 
     if ($statusLogin == 1) {
         $_SESSION['token'] = $Token;

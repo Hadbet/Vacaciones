@@ -322,6 +322,12 @@
 
 <script>
 
+    var fechaActual = new Date();
+
+    fechaActual.setMinutes(fechaActual.getMinutes() + 5);
+
+    console.log(fechaActual);
+
     var token = getParameterByName("token");
 
     function getParameterByName(name) {
