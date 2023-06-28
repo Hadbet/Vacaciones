@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Correccion de tiempo ciclo">
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Se agrego el sesion_start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fila.php" beforeDir="false" afterPath="$PROJECT_DIR$/fila.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,7 @@
       <workItem from="1686179072057" duration="30106000" />
       <workItem from="1686678928446" duration="19713000" />
       <workItem from="1687212302835" duration="14344000" />
-      <workItem from="1687891335836" duration="18413000" />
+      <workItem from="1687891335836" duration="19236000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de index.html">
       <created>1686157300042</created>
@@ -372,7 +371,28 @@
       <option name="project" value="LOCAL" />
       <updated>1687975508175</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Alert para la visualziacion de valor de variables">
+      <created>1687976658981</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1687976658981</updated>
+    </task>
+    <task id="LOCAL-00042" summary="; quitados">
+      <created>1687976746999</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1687976746999</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Se agrego el sesion_start">
+      <created>1687977053982</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1687977053982</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,9 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Realización inicial de la logica de la fila virtual" />
-    <MESSAGE value="Realizacion de dao principal de registro de peticion de vacaciones" />
-    <MESSAGE value="Agrego fila.html para un mejor control" />
     <MESSAGE value="Actualizacion de registro.html fetch,variables y acomodo" />
     <MESSAGE value="Actualizacion de registro de fila falta la consulta de la fila" />
     <MESSAGE value="Correccion de name de login.html" />
@@ -427,7 +444,10 @@
     <MESSAGE value="Se cambio el tipo de archivo a php y se agrego la consulta del session turno y token." />
     <MESSAGE value="coreccion de errores" />
     <MESSAGE value="Correccion de tiempo ciclo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correccion de tiempo ciclo" />
+    <MESSAGE value="Alert para la visualziacion de valor de variables" />
+    <MESSAGE value="; quitados" />
+    <MESSAGE value="Se agrego el sesion_start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agrego el sesion_start" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

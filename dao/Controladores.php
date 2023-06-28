@@ -52,7 +52,7 @@ if (isset($_POST['btnFila'])) {
 
     if ($statusLogin == 1) {
         $_SESSION['token'] = $Token;
-        $_SESSIOM['turno'] = $Turno;
+        $_SESSION['turno'] = $Turno;
 
         echo $_SESSION['token'];
         echo $_SESSION['turno'];
