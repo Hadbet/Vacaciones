@@ -5,8 +5,8 @@
 
 	session_start();
 
-	if ($_SESSION["username"] == "" && $_SESSION["username"]== null) {
-		echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../registro.html'>";
+	if ($_SESSION["token"] == "" && $_SESSION["token"]== null) {
+		echo "<META HTTP-EQUIV='REFRESH' CONTENT='1; URL=../login.html'>";
 session_destroy();
 }?> -->
 
@@ -129,8 +129,8 @@ session_destroy();
         }, 1000);
     }
 
-    var Turno = 1;
-    var Token = "";
+    var Turno = '<?php echo $_SESSION["turno"];?>';
+    var Token = '<?php echo $_SESSION["token"];?>';
 
     $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoConsultaTurno.php', function (data) {
         if (data.data[0].Turno != "No") {
