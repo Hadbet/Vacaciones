@@ -28,7 +28,6 @@
 
     <!-- Main -->
     <div id="main">
-
         <!-- Second Section -->
         <section id="second" class="main special">
             <header class="major">
@@ -42,10 +41,7 @@
                 </ul>
             </form>
         </section>
-
-
     </div>
-
 
     <!-- Footer -->
     <footer id="footer">
@@ -91,37 +87,6 @@
         integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
         data-cf-beacon='{"rayId":"7cd6c8fc89644871","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.4.0","si":100}'
         crossorigin="anonymous"></script>
-
-<script>
-
-    function countdown(minutes) {
-        var seconds = minutes * 60;
-        var contadorElement = document.getElementById("contador");
-
-        var timer = setInterval(function () {
-            var minutesRemaining = Math.floor(seconds / 60);
-            var secondsRemaining = seconds % 60;
-
-            // Formateo para mostrar siempre 2 dígitos en los minutos y segundos
-            var formattedMinutes = String(minutesRemaining).padStart(2, "0");
-            var formattedSeconds = String(secondsRemaining).padStart(2, "0");
-
-            // Actualizar el contenido del elemento contador
-            contadorElement.textContent = formattedMinutes + ":" + formattedSeconds;
-
-            // Verificar si el tiempo ha llegado a cero
-            if (seconds <= 0) {
-                clearInterval(timer);
-                contadorElement.textContent = "Espere un momento esta apunto de entrar";
-            }
-
-            seconds--;
-        }, 1000);
-    }
-
-    // Ejemplo de una cuenta regresiva de 5 minutos
-    countdown(89 - 80);
-</script>
 
 </body>
 
