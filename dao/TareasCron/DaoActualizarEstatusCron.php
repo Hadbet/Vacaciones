@@ -1,5 +1,5 @@
 <?php
-include_once('DataBase/Vacaciones.php');
+include_once('../DataBase/Vacaciones.php');
 
 //$Token = $_GET['6486f0e4'];
 
@@ -21,19 +21,19 @@ function actualizarEstatus()
     if (!$rsUpdateFechaCorte) {
         $success = false;
     }
-/*
+
     $rsUpdateFechaEstimada = mysqli_query($conex, $updateFechaEstimada);
     if (!$rsUpdateFechaEstimada) {
         $success = false;
     }
-*/
+
     mysqli_close($conex);
-/*
+
     if ($success) {
         echo '{"data":[{"Estatus":"1"}]}';
     } else {
         echo '{"data":[{"Estatus":"0"}]}';
-    }*/
+    }
 }
 
 ?>
