@@ -6,12 +6,15 @@ include_once('DataBase/Vacaciones.php');
 actualizarEstatus();
 function actualizarEstatus()
 {
-    $con = new LocalConector();
-    $conex = $con->conectar();
+    /*$con = new LocalConector();
+    $conex = $con->conectar();*/
 
     $updateFechaCorte = "UPDATE `FilaVirtual` SET `Estatus`='0' WHERE `FechaCorte`<= NOW() AND FechaCorte != '0000-00-00 00:00:00' AND Estatus = 1;";
     $updateFechaEstimada = "UPDATE `FilaVirtual` SET `Estatus`='0' WHERE `FechaEstimada`<= NOW() AND Estatus = 1;";
 
+    echo $updateFechaCorte;
+    echo $updateFechaEstimada;
+/*
     $success = true;
 
     $rsUpdateFechaCorte = mysqli_query($conex, $updateFechaCorte);
@@ -30,7 +33,7 @@ function actualizarEstatus()
         echo '{"data":[{"Estatus":"1"}]}';
     } else {
         echo '{"data":[{"Estatus":"0"}]}';
-    }
+    }*/
 }
 
 ?>
