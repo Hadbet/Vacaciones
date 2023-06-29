@@ -21,12 +21,12 @@ function actualizarEstatus()
     if (!$rsUpdateFechaCorte) {
         $success = false;
     }
-
+/*
     $rsUpdateFechaEstimada = mysqli_query($conex, $updateFechaEstimada);
     if (!$rsUpdateFechaEstimada) {
         $success = false;
     }
-
+*/
     mysqli_close($conex);
 /*
     if ($success) {
