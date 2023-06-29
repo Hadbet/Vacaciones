@@ -27,7 +27,9 @@ function actualizarEstatus()
     mysqli_close($conex);
 
     if ($success) {
+        echo '{"data":[{"Estatus":"1"}]}';
     } else {
+        echo '{"data":[{"Estatus":"0"}]}';
     }
 }
 
