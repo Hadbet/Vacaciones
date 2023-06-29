@@ -129,20 +129,35 @@ session_destroy();
         }, 1000);
     }
 
-    var Turno = '<?php echo $_SESSION["turno"]?>';
-    var Token = '<?php echo $_SESSION["token"]?>';
+    function ejecutarCodigo() {
 
-    alert(Turno);
-    alert(Token);
+        var Turno = '<?php echo $_SESSION["turno"]?>';
+        var Token = '<?php echo $_SESSION["token"]?>';
 
-    $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoConsultaTurno.php', function (data) {
-        if (data.data[0].Turno != "No") {
-            if (data.data[0].Turno == Turno) {
-                window.location.href = 'registro.html?token=' + data.data[0].Token;
+        $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoConsultaTurno.php', function (data) {
+            if (data.data[0].Turno != "No") {
+                if (data.data[0].Turno == Turno) {
+                    window.location.href = 'registro.html?token=' + data.data[0].Token;
+                }
+            } else {
+                // Hacer algo en caso de que el turno sea "No"
             }
-        } else {
-        }
-    });
+        });
+
+        $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/TareasCron/DaoActualizarEstatusCron.php', function (data) {
+            if (data.data[0].Turno != "No") {
+                if (data.data[0].Turno == Turno) {
+                    window.location.href = 'registro.html?token=' + data.data[0].Token;
+                }
+            } else {
+                // Hacer algo en caso de que el turno sea "No"
+            }
+        });
+    }
+
+    ejecutarCodigo();
+
+    setInterval(ejecutarCodigo, 5000);
 
     $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoContadorFila.php', function (data) {
         countdown(data.data[0].Conteo * 5 - 5);

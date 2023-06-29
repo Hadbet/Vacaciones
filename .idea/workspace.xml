@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Correccion de sintasis de varibles">
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Coreccion de resta y suma">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/TareasCron/DaoActualizarEstatusCron.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/TareasCron/DaoActualizarEstatusCron.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fila.php" beforeDir="false" afterPath="$PROJECT_DIR$/fila.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +91,7 @@
       <workItem from="1686179072057" duration="30106000" />
       <workItem from="1686678928446" duration="19713000" />
       <workItem from="1687212302835" duration="14344000" />
-      <workItem from="1687891335836" duration="19733000" />
+      <workItem from="1687891335836" duration="28337000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de index.html">
       <created>1686157300042</created>
@@ -400,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687977557086</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Coreccion de resta y suma">
+      <created>1687978012785</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1687978012785</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Actualizacion de registro de fila falta la consulta de la fila" />
     <MESSAGE value="Correccion de name de login.html" />
     <MESSAGE value="Se agrego return en DaoFila.php" />
     <MESSAGE value="Se agregaron echo en DaoFila.php" />
@@ -455,7 +462,8 @@
     <MESSAGE value="; quitados" />
     <MESSAGE value="Se agrego el sesion_start" />
     <MESSAGE value="Correccion de sintasis de varibles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correccion de sintasis de varibles" />
+    <MESSAGE value="Coreccion de resta y suma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coreccion de resta y suma" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

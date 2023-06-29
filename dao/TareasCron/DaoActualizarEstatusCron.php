@@ -1,23 +1,33 @@
 <?php
 include_once('DataBase/Vacaciones.php');
 
-$Token = $_GET['6486f0e4'];
+//$Token = $_GET['6486f0e4'];
 
-actualizarEstatus($Token);
-function actualizarEstatus($Token)
+actualizarEstatus();
+function actualizarEstatus()
 {
     $con = new LocalConector();
     $conex = $con->conectar();
 
-    $insertRegistro = "UPDATE `FilaVirtual` SET `Estatus`='2' WHERE `FechaCorte`<= NOW() or `FechaEstimada`<=NOW() and FechaCorte not like '0000-00-00 00:00:00'";
+    $updateFechaCorte = "UPDATE `FilaVirtual` SET `Estatus`='0' WHERE `FechaCorte`<= NOW() AND FechaCorte != '0000-00-00 00:00:00' AND Estatus = 1;";
+    $updateFechaEstimada = "UPDATE `FilaVirtual` SET `Estatus`='0' WHERE `FechaEstimada`<= NOW() AND Estatus = 1;";
 
-    $rsinsertUsu = mysqli_query($conex, $insertRegistro);
+    $success = true;
+
+    $rsUpdateFechaCorte = mysqli_query($conex, $updateFechaCorte);
+    if (!$rsUpdateFechaCorte) {
+        $success = false;
+    }
+
+    $rsUpdateFechaEstimada = mysqli_query($conex, $updateFechaEstimada);
+    if (!$rsUpdateFechaEstimada) {
+        $success = false;
+    }
+
     mysqli_close($conex);
 
-    if (!$rsinsertUsu) {
-        echo '{"data":[{"Estatus":"0"}]}';
+    if ($success) {
     } else {
-        echo '{"data":[{"Estatus":"1"}]}';
     }
 }
 
