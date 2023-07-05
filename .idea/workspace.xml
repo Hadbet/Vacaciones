@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Correccion de directorio del archivo de la base de datos">
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Se quito código no funcional del login.html">
+      <change afterPath="$PROJECT_DIR$/lib/cssAuxiliares/registro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sweetalert2.all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sweetalert2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/registro.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +80,7 @@
       <recent name="C:\Users\ex-ayari.altamirano\PhpstormProjects\PVacaciones\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ex-ayari.altamirano\PhpstormProjects\PVacaciones\lib" />
       <recent name="C:\Users\ex-ayari.altamirano\PhpstormProjects\PVacaciones" />
     </key>
   </component>
@@ -89,14 +97,7 @@
       <workItem from="1686179072057" duration="30106000" />
       <workItem from="1686678928446" duration="19713000" />
       <workItem from="1687212302835" duration="14344000" />
-      <workItem from="1687891335836" duration="32893000" />
-    </task>
-    <task id="LOCAL-00003" summary="Librerias y utilidades">
-      <created>1686158738180</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1686158738180</updated>
+      <workItem from="1687891335836" duration="36124000" />
     </task>
     <task id="LOCAL-00004" summary="Librerias y utilidades">
       <created>1686160108754</created>
@@ -434,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688073124634</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Se quito código no funcional del login.html">
+      <created>1688078907264</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1688078907264</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Se agregaron echo" />
     <MESSAGE value="Se agregaron post" />
     <MESSAGE value="Correcciones de errores en 500" />
     <MESSAGE value="Correccion de Fila Turno" />
@@ -489,7 +496,8 @@
     <MESSAGE value="Se agrego intervalos para pruebas de funcionalidad" />
     <MESSAGE value="Correccion de errores" />
     <MESSAGE value="Correccion de directorio del archivo de la base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correccion de directorio del archivo de la base de datos" />
+    <MESSAGE value="Se quito código no funcional del login.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se quito código no funcional del login.html" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
