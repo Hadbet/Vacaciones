@@ -1,7 +1,7 @@
 <?php
 
 include_once('DataBase/Vacaciones.php');
-function registroUsu($Token, $Turno, $DateAndTime,$DateAux)
+function registroFila($Token, $Turno, $DateAndTime,$DateAux)
 {
 
     $con = new LocalConector();

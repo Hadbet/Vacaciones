@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Se quito código no funcional del login.html">
-      <change afterPath="$PROJECT_DIR$/lib/cssAuxiliares/registro.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jquery-3.6.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sweetalert2.all.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sweetalert2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/registro.html" afterDir="false" />
-    </list>
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Se agregaron librerias de sweetalert2 para una vision mas dinamica" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,14 +88,7 @@
       <workItem from="1686179072057" duration="30106000" />
       <workItem from="1686678928446" duration="19713000" />
       <workItem from="1687212302835" duration="14344000" />
-      <workItem from="1687891335836" duration="36124000" />
-    </task>
-    <task id="LOCAL-00004" summary="Librerias y utilidades">
-      <created>1686160108754</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1686160108754</updated>
+      <workItem from="1687891335836" duration="36435000" />
     </task>
     <task id="LOCAL-00005" summary="Extencion">
       <created>1686160334980</created>
@@ -442,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688078907264</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Se agregaron librerias de sweetalert2 para una vision mas dinamica">
+      <created>1688598124733</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1688598124733</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Se agregaron post" />
     <MESSAGE value="Correcciones de errores en 500" />
     <MESSAGE value="Correccion de Fila Turno" />
     <MESSAGE value="Correccion de todos los errores del registro" />
@@ -497,7 +487,8 @@
     <MESSAGE value="Correccion de errores" />
     <MESSAGE value="Correccion de directorio del archivo de la base de datos" />
     <MESSAGE value="Se quito código no funcional del login.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se quito código no funcional del login.html" />
+    <MESSAGE value="Se agregaron librerias de sweetalert2 para una vision mas dinamica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregaron librerias de sweetalert2 para una vision mas dinamica" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -48,7 +48,7 @@ if (isset($_POST['btnFila'])) {
 
 
 
-    $statusLogin = registroUsu($Token, $Turno, $DateAndTime,$DateAux);
+    $statusLogin = registroFila($Token, $Turno, $DateAndTime,$DateAux);
 
     if ($statusLogin == 1) {
         $_SESSION['token'] = $Token;
