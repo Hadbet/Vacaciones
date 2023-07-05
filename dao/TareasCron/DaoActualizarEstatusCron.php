@@ -9,8 +9,12 @@ function actualizarEstatus()
     $con = new LocalConector();
     $conex = $con->conectar();
 
-    $updateFechaCorte = "UPDATE `FilaVirtual` SET `Estatus`='0' WHERE `FechaCorte`<= NOW() AND FechaCorte != '0000-00-00 00:00:00' AND Estatus = 1;";
-    $updateFechaEstimada = "UPDATE `FilaVirtual` SET `Estatus`='0' WHERE `FechaEstimada`<= NOW() AND Estatus = 1;";
+    $Object = new DateTime();
+    $Object->setTimezone(new DateTimeZone('America/Denver'));
+    $DateAndTime = $Object->format("Y/m/d h:i:s");
+
+    $updateFechaCorte = "UPDATE `FilaVirtual` SET `Estatus`='0' WHERE `FechaCorte`<= '$DateAndTime' AND FechaCorte != '0000-00-00 00:00:00' AND Estatus = 1;";
+    $updateFechaEstimada = "UPDATE `FilaVirtual` SET `Estatus`='0' WHERE `FechaEstimada`<= '$DateAndTime' AND Estatus = 1;";
 
     echo $updateFechaCorte;
     echo $updateFechaEstimada;
