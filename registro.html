@@ -382,7 +382,6 @@
         if (diferencia < 0) {
             clearInterval(intervalo);
             contadorElemento.innerHTML = "00:00";
-            alert("Se acabo el tiempo");
             actualizarEstatus();
         }
     }, 1000)
@@ -390,7 +389,28 @@
     function actualizarEstatus() {
         $.getJSON('https://arketipo.mx/public_html/RH/Vacaciones/dao/DaoActualizarEstatus.php?6486f0e4=' + token, function (data) {
             if (data.data[0].Estatus != "0") {
-                alert("Algo salio mal");
+                let timerInterval
+                Swal.fire({
+                    title: 'Se acabo su tiempo!',
+                    html: 'Sera expulsado de la fila en <b></b> milliseconds.',
+                    timer: 2000,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading()
+                        const b = Swal.getHtmlContainer().querySelector('b')
+                        timerInterval = setInterval(() => {
+                            b.textContent = Swal.getTimerLeft()
+                        }, 50)
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval)
+                    }
+                }).then((result) => {
+                    /* Read more about handling dismissals below */
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        window.location.href = 'https://arketipo.mx/public_html/RH/Vacaciones/login.html';
+                    }
+                })
             } else {
                 alert("Correcto");
             }
