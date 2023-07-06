@@ -32,7 +32,7 @@ function registroVacaciones($Token, $ShiftLeader, $Operacion,$Valor)
     mysqli_close($conex);
 
     if (!$rsinsertUsu) {
-        //echo $insertRegistro;
+        echo $insertRegistro;
     } else {
         //echo "Si funciona";
         return 1;
