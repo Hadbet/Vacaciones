@@ -13,7 +13,9 @@ $Operacion = $otrosDatos['OperacionAux'];
 
 foreach ($arrayDatos as $Valor) {
     registroVacaciones($Token, $ShiftLeader, $Operacion,$Valor);
+    echo $Valor;
 }
+
 function registroVacaciones($Token, $ShiftLeader, $Operacion,$Valor)
 {
 
@@ -30,9 +32,9 @@ function registroVacaciones($Token, $ShiftLeader, $Operacion,$Valor)
     mysqli_close($conex);
 
     if (!$rsinsertUsu) {
-        echo $insertRegistro;
+        //echo $insertRegistro;
     } else {
-        echo "Si funciona";
+        //echo "Si funciona";
         return 1;
     }
 }
