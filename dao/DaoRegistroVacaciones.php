@@ -24,7 +24,7 @@ function registroVacaciones($Token, $ShiftLeader, $Operacion,$Valor)
     $Object->setTimezone(new DateTimeZone('America/Denver'));
     $DateAndTime = $Object->format("Y/m/d h:i:s");
 
-    $insertRegistro = "INSERT INTO `PeticionVacaciones`(`ShiftLeader`, `TipoOperacion`, `Operacion`, `Token`, `FechaRegistro`,`FechaVacaciones`) VALUES ('$ShiftLeader','','$Operacion','$Token','$DateAndTime','$DateAndTime','$Valor')";
+    $insertRegistro = "INSERT INTO `PeticionVacaciones`(`ShiftLeader`, `TipoOperacion`, `Operacion`, `Token`, `FechaRegistro`,`FechaVacaciones`) VALUES ('$ShiftLeader','','$Operacion','$Token','$DateAndTime','$Valor')";
 
     $rsinsertUsu = mysqli_query($conex, $insertRegistro);
     mysqli_close($conex);
