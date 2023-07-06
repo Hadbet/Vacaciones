@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Se corrigui botones fantasmas">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Cambio de ruta de dao en el registro.html">
       <change beforePath="$PROJECT_DIR$/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/registro.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,14 +90,7 @@
       <workItem from="1686179072057" duration="30106000" />
       <workItem from="1686678928446" duration="19713000" />
       <workItem from="1687212302835" duration="14344000" />
-      <workItem from="1687891335836" duration="38883000" />
-    </task>
-    <task id="LOCAL-00009" summary="Realizacion de dao principal de registro de peticion de vacaciones">
-      <created>1686260490366</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1686260490366</updated>
+      <workItem from="1687891335836" duration="39250000" />
     </task>
     <task id="LOCAL-00010" summary="Realizacion de dao principal de registro de peticion de vacaciones">
       <created>1686260680093</created>
@@ -436,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688599870503</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Cambio de ruta de dao en el registro.html">
+      <created>1688601725186</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1688601725186</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Aviso de errores por json" />
     <MESSAGE value="Se agrega token en fila.html" />
     <MESSAGE value="Se actualizo y agrego el cambio de estatus en la parte del termino del tiempo ciclo" />
     <MESSAGE value="Correcciones del get." />
@@ -491,7 +489,8 @@
     <MESSAGE value="Se cambio la logica del Dao ya que NOW() tenia una fecha erronea" />
     <MESSAGE value="Se agregaron mas alertas esteticas" />
     <MESSAGE value="Se corrigui botones fantasmas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se corrigui botones fantasmas" />
+    <MESSAGE value="Cambio de ruta de dao en el registro.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio de ruta de dao en el registro.html" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
