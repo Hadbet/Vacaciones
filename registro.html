@@ -314,8 +314,8 @@
             valores.push(valor);
 
         }
-        //insertarDatos(valores);
         alert(valores);
+        insertarDatos(valores);
     }
 
     function insertarDatos(datos) {
@@ -326,10 +326,10 @@
         var operacion = document.getElementById("txtOperacion");
 
         var otrosDatos = {
-            SupervisorAux: supervisor,
-            ShiftLeaderAux: shiftLeader,
-            TurnoAux: Turno,
-            OperacionAux: operacion
+            SupervisorAux: supervisor.value,
+            ShiftLeaderAux: shiftLeader.value,
+            TurnoAux: Turno.value,
+            OperacionAux: operacion.value
         };
 
         var requestData = {
