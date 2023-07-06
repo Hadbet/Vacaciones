@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="123e7e99-3825-4c4d-a1d6-1fdcc99d53aa" name="Changes" comment="Corrección de las variables del DaoRegistroVacaciones.php">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/DaoRegistroVacaciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/DaoRegistroVacaciones.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,21 +90,7 @@
       <workItem from="1686179072057" duration="30106000" />
       <workItem from="1686678928446" duration="19713000" />
       <workItem from="1687212302835" duration="14344000" />
-      <workItem from="1687891335836" duration="41787000" />
-    </task>
-    <task id="LOCAL-00016" summary="Se agregaron echo en DaoFila.php">
-      <created>1686765203473</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1686765203473</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Se agregaron echo">
-      <created>1686765409046</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1686765409046</updated>
+      <workItem from="1687891335836" duration="41967000" />
     </task>
     <task id="LOCAL-00018" summary="Se agregaron post">
       <created>1686765474622</created>
@@ -436,7 +421,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688660340670</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Corrección de las variables del DaoRegistroVacaciones.php">
+      <created>1688660510642</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1688660510642</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Corrección de las variables del DaoRegistroVacaciones.php">
+      <created>1688660587736</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1688660587736</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
