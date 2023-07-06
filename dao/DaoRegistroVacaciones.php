@@ -13,7 +13,7 @@ $Operacion = $otrosDatos['OperacionAux'];
 
 foreach ($arrayDatos as $Valor) {
     registroVacaciones($Token, $ShiftLeader, $Operacion,$Valor);
-    //echo $Valor;
+    echo $Valor;
 }
 
 function registroVacaciones($Token, $ShiftLeader, $Operacion,$Valor)
