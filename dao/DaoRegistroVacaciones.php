@@ -30,7 +30,7 @@ function registroVacaciones($Token, $ShiftLeader, $Operacion,$Valor)
     mysqli_close($conex);
 
     if (!$rsinsertUsu) {
-        echo "0";
+        echo $Valor;
     } else {
         echo "Si funciona";
         return 1;
